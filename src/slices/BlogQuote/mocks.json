@@ -1,0 +1,19 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"author": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Darlene Robertson"
+			},
+			"content": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit amet sit purus tempor dui pharetra consequat nibh elit urna interdum viera quam a arcu duis quis lectus donec nulla aliquam sit fermentum morbi sed nisl molestie."
+			}
+		},
+		"items": []
+	}
+]

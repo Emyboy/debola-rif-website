@@ -1,0 +1,20 @@
+{
+  "id": "featured_in",
+  "label": "Featured in",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "config": { "label": "UID" }, "type": "UID" },
+      "logo": {
+        "type": "Image",
+        "config": { "label": "Logo", "constraint": {}, "thumbnails": [] }
+      },
+      "link": {
+        "type": "Text",
+        "config": { "label": "link", "placeholder": "" }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "impact_report",
+  "label": "Impact Report",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": { "config": { "label": "UID" }, "type": "UID" },
+      "title": {
+        "type": "Text",
+        "config": { "label": "Title", "placeholder": "" }
+      },
+      "short_description": {
+        "type": "Text",
+        "config": { "label": "Short Description", "placeholder": "" }
+      },
+      "featured_image": {
+        "type": "Image",
+        "config": {
+          "label": "Featured image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "report": {
+        "type": "Link",
+        "config": { "label": "Report", "placeholder": "", "select": "media" }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "blog_quote",
+  "type": "SharedSlice",
+  "name": "BlogQuote",
+  "description": "BlogQuote",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "author": {
+          "type": "Text",
+          "config": { "label": "Author", "placeholder": "" }
+        },
+        "content": {
+          "type": "Text",
+          "config": { "label": "Content", "placeholder": "" }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

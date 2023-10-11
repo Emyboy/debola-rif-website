@@ -1,0 +1,23 @@
+{
+  "id": "page_project_images",
+  "type": "SharedSlice",
+  "name": "PageProjectImages",
+  "description": "PageProjectImages",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {},
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": { "label": "image", "constraint": {}, "thumbnails": [] }
+        }
+      }
+    }
+  ]
+}
