@@ -107,7 +107,7 @@ const MainNav = () => {
   return (
 
     <main>
-      <div className="bg-transparent py-2 border-b z-50  fixed top-0 left-0 right-0 shadow-lg backdrop-filter backdrop-blur-lg">
+      <div className="bg-green-800 py-2 border-b z-50  fixed top-0 left-0 right-0 shadow-lg backdrop-filter backdrop-blur-lg">
 
         <div className='   flex  justify-between items-center container  capitalize h-25 px-5 sticky top-0'>
 <h1>LOgo</h1>

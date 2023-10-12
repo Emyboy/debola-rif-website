@@ -32,21 +32,21 @@ const WhatWeDo = () => {
         <div className='row justify-content-center'>  
      <Card 
      num='1.'
-     imageSrc="https://demo.happyaddons.com/wp-content/uploads/2019/05/card-image13a.png"
+     imageSrc="/assets/images/home/child-2.jpeg"
      title="Combating militancy to promote positive youth engagement"
      description=" Encourage young people to participate in local and national decision-making processes. Their voices and perspectives should be heard and valued in matters that affect their communities and future"
 
      />
      <Card 
      num='2.'
-     imageSrc="https://demo.happyaddons.com/wp-content/uploads/2019/05/card-image13a.png"
+     imageSrc="/assets/images/home/child.jpeg"
      title="Job creation"
      description="Infrastructure development, including transportation, energy, and telecommunications, can create both short-term construction jobs and long-term employment opportunities in various sectors"
 
      />
      <Card 
      num='3.'
-     imageSrc="https://demo.happyaddons.com/wp-content/uploads/2019/05/card-image13a.png"
+     imageSrc="/assets/images/home/rif-woman.jpeg"
      title="Early childhood development"
      description="Motor Skills: ECD includes the development of both gross motor skills (like crawling, walking, and running) and fine motor skills (like grasping objects, drawing, and writing)."
 
