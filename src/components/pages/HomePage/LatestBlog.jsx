@@ -13,7 +13,7 @@ const LatestBlog = ({ posts }) => {
                 from our various programs. Stay glued for updates!
               </h3>
 </div>
-      <div className='grid-cols-3 gap-4 grid' >
+      <div className='md:grid-cols-3 gap-4 grid' >
       {posts?.map((post) => (
             <EachBlog
               key={post?.id}

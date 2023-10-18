@@ -1,3 +1,4 @@
+import ContainLayout from '@/components/layout/ContainerLayout';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -37,10 +38,13 @@ const features = [
 
 const FeatureIn = ({ featured_in }) => {
   return (
-    <section className='bg-whit mb-[10rem]  px-5'>
+<ContainLayout>
+<section className=' py-12  px-5'>
       <div className='container relative mx-auto '>
-        <h3 className=' text-[2rem]'>Featured in</h3>
-        <div className='row mt-8 gap-3 '>
+      <div className='mx-auto flex flex-col '>
+<h3 className='text-[40px] font-bold'> <span className='text-green-shad2   '>Feauture in </span></h3>
+</div>
+        <div className="overflow-hidden hidden py-8 lg:flex gap-x-8 gap-y-4 lg:gap-x-0 flex-wrap lg:justify-between w-full items-center ">
           {featured_in?.map((feature) => (
             <FeatureCard
               key={feature.id}
@@ -51,22 +55,27 @@ const FeatureIn = ({ featured_in }) => {
         </div>
       </div>
     </section>
+</ContainLayout>
   );
-};
+}; 
 
 const FeatureCard = ({ image, link, alt }) => {
   return (
     <Link
       href={link}
       target='_blank'
-      className='relative block  h-[200px] w-full max-w-[350px] rounded-[12px] bg-[#f9f4e8] hover:scale-105'
+      className='relative    '
     >
+      
+      <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
       <Image
-        fill
-        className='object-contain'
+        width={50}
+        height={50}
         src={image}
-        alt={alt || 'feature'}
+        alt="icons"
+        className=" w-fit grayscale-[100] h-full group-hover:grayscale-0 transition-all duration-500 ease-out"
       />
+    </div>
     </Link>
   );
 };

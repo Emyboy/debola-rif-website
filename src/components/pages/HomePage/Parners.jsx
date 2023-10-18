@@ -91,8 +91,8 @@ const Tesla2 = () => {
 const Partners = () => {
   return (
 <ContainLayout>
-<div className="mt-20 px-[6%] 5xl:px-[25%]">
-     
+<div className="mt-20 px-[6%] py-12 5xl:px-[25%]">
+      <h3>OUR PARTNERS</h3>
      <div className="overflow-hidden hidden  lg:flex gap-x-8 gap-y-4 lg:gap-x-0 flex-wrap lg:justify-between w-full items-center ">
        <Airbnb />
        <Stripe />

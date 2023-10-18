@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React,{useState,useEffect} from 'react'
 import {AiOutlineClose,AiOutlineMenuFold} from 'react-icons/ai'
 const Header = () => {
@@ -12,15 +13,15 @@ const Header = () => {
     <div className='bg-white shadow-lg'>
  <div className='max-w-[1240]  py-4 flex  justify-between items-center container  capitalize h-25 mx-auto px-5 sticky top-0'>
  <h1 className=' '>
-  <img src="https://easetemplate.com/borrow/assets/images/brand/logo/logo.svg" alt="" />
+  Logo
  </h1>
       <ul className="hidden sm:flex  font-bold text-gray-400">
-        <li className='p-3 cursor-pointer' >home</li>
-        <li className='p-3 cursor-pointer'cur>company</li>
-        <li className='p-3 cursor-pointer'> resources</li>
-        <li className='p-3 cursor-pointer'> about</li>
-
-        <li className='p-3 '> contact</li>
+        <li className='p-3 cursor-pointer' ><Link href='/'>home</Link></li>
+        <li className='p-3 cursor-pointer'cur><Link href='/who-we-are'>who we are</Link></li>
+        <li className='p-3 cursor-pointer'> <Link href='/past-project'>Past Project</Link></li>
+        <li className='p-3 cursor-pointer'><Link href='/contact-us'> contact us</Link></li>
+        <li className='p-3 '><Link href='/blog'>Blog</Link> </li>
+        <li className='p-3 '><Link href='/impact-report'> Impact project</Link></li>
       </ul>
 
       <div onClick={handleClick} className="block sm:hidden">

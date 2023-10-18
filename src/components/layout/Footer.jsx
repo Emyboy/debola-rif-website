@@ -5,7 +5,7 @@ import {AiFillLinkedin,AiFillInstagram} from 'react-icons/ai'
 import {BsFacebook} from 'react-icons/bs'
 const Footer = () => {
   return (
-    <div className="bg-white pt-8 text-black">
+    <div className="bg-[rgb(234,216,217)] pt-8 text-white">
       <div className="container px-6  md:flex justify-center items-center   ">
         {/* <div className="flex flex-col">
           <Image
@@ -101,9 +101,7 @@ const Footer = () => {
         </div>
         
       </div>
-      <div className="py-10 md:py-6 md:mt-7 flex md:block md:px-[7.6rem] justify-center items-center flex-col bg-[#F7F4FA] text-slate-500">
-              <h4 className="flex gap-6">Copyright © 2023 IVARA LTD</h4>
-            </div>
+
     </div>
   );
 };

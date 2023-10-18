@@ -15,10 +15,10 @@ const WhoWeAre = ({ featured_in }) => {
         description={`An Iwere Nation's Human Capital Development Programme`}
       />
       <HeroSection />
-      <How_rif />
+      <Focus />
       <Mission />
       <Vision />
-      <Focus />
+     
       <FeatureIn featured_in={featured_in} />
     </>
   );
