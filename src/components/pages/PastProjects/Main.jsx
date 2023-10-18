@@ -3,6 +3,8 @@ import EachProject from './EachProject';
 import { data } from 'autoprefixer';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import HeroBanner2 from '@/components/layout/HeroLayout';
+import ContainLayout from '@/components/layout/ContainerLayout';
 
 const Main = ({ projects, totalPages }) => {
   const router = useRouter();
@@ -14,9 +16,12 @@ const Main = ({ projects, totalPages }) => {
     (_, index) => index + 1
   );
   return (
-    <div className='blog events event-page'>
+<div>
+<HeroBanner2 title='past project' />
+<ContainLayout>
+<div className='blog events event-page'>
       <div className='container'>
-        <div className='  items-stretch   '>
+        <div className='gap-6 my-12  grid md:grid-cols-3    '>
           {projects.map((project) => (
             <EachProject
               link={`/past-project/${project.uid}`}
@@ -48,6 +53,8 @@ const Main = ({ projects, totalPages }) => {
         </div>
       </div>
     </div>
+</ContainLayout>
+</div>
   );
 };
 
