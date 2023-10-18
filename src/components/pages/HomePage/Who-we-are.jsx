@@ -1,28 +1,23 @@
 import Image from 'next/image';
-import React from 'react';
 
-const WhoWeAre = () => {
+import ContainLayout from '@/components/layout/ContainerLayout'
+import React from 'react'
+
+const Whoweare = () => {
   return (
-    <div className='container mx-auto my-20 flex flex-wrap gap-8 bg-white px-[16] lg:flex-nowrap  lg:px-12'>
-      <div
-        style={{
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-        }}
-        className='relative lg:h-[450px] lg:w-[50%]'
-      >
-        <Image
-          src={'/assets/images/home/rif-woman-2.jpeg'}
-          className='object-contain'
-          fill
-        />
+<div  className='py-32'>
+<ContainLayout>
+     <div className='grid md:grid-cols-2 items-center gap-10 '>
+      <div>
+        <Image src='/assets/iwere-homepage.jpg' className='rounded-md' height='1200' width='1200' alt='ed'  />
       </div>
-      <div className='activites_info lg:w-[50%]'>
-        <div className='section_title text-center lg:text-left'>
-          <h3>Who we are</h3>
-        </div>
-        <p className='para_1 font-museo'>
-          RIF, an African non profit organisation founded in 2023, aims to
+      <div>
+        <div>
+       <p className='text-[20px] font-yeseva'> Welcome to RIF</p>
+       <h3 className='text-[40px] font-bold'>WHO WE <span className='text-green-shad2   '>ARE</span></h3>
+<div className='md:max-w-[500px] mt-6'>
+<p className='text-[16px]'>
+   RIF, an African non profit organisation founded in 2023, aims to
           assist the Warri Kingdom by effectively tackling obstacles and
           vulnerabilities that could hinder the state's continuous development
           and its capacity to compete internationally. RIF, an African non
@@ -30,21 +25,21 @@ const WhoWeAre = () => {
           by effectively tackling obstacles and vulnerabilities that could
           hinder the state's continuous development and its capacity to compete
           internationally.
-        </p>
-        <blockquote className=' mt-3 rounded-[8px] border-b-[8px] border-b-primary-green-2 bg-green-200 p-2 font-museo lg:m-3 lg:mt-0'>
-          "RIF is a restorative mission to re-engineer the mindsets of indigenes
+          
+   </p>
+   <p className='text-[16px] pt-6'>
+   "RIF is a restorative mission to re-engineer the mindsets of indigenes
           of Warri Kingdom to propel them for a more productive and fulfilling
           life, and in turn, be worthy examples for the next generation."
-          <br />
-          <br />
-          <span className='font-bold'>Olori Atuwatse III</span>
-        </blockquote>
-        {/* <a href='#' data-scroll-nav='1' className='boxed-btn4'>
-                Donate Now
-              </a> */}
-      </div>
-    </div>
-  );
-};
 
-export default WhoWeAre;
+   </p>
+</div>
+        </div>
+      </div>
+      </div>
+   </ContainLayout>
+</div>
+  )
+}
+
+export default  Whoweare

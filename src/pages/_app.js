@@ -1,13 +1,4 @@
-import '../../public/assets/css/bootstrap.min.css';
-import '../../public/assets/css/magnific-popup.css';
-// import '../../public/assets/css/font-awesome.min.css';
-// import '../../public/assets/css/themify-icons.css';
-import '../../public/assets/css/nice-select.css';
-// import '../../public/assets/css/flaticon.css';
-// import '../../public/assets/css/gijgo.css';
-import '../../public/assets/css/animate.css';
-import '../../public/assets/css/slicknav.css';
-import '../../public/assets/css/style.css';
+
 
 import Head from 'next/head';
 import SEO from '@/METADATA';

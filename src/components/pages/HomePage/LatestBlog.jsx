@@ -1,28 +1,20 @@
 import Link from 'next/link';
 import EachBlog from '../Blog/EachBlog';
+import ContainLayout from '@/components/layout/ContainerLayout';
 
 const LatestBlog = ({ posts }) => {
   return (
-    <section className='blog bg-white md:py-16'>
-      <div className='blank'></div>
-      <div className='container '>
-        <div className='row items-stretch '>
-          <div className='col-xl-12'>
-            <div className='align-title'>
-              <h5>Latest Blog</h5>
-              <h3
-                style={{
-                  fontSize: ' 1.2rem',
-                  lineHeight: '20px',
-                  padding:'10px 10px'
-                }}
-              >
+<ContainLayout>
+<div className='py-16'>
+<div className='flex flex-col py-6 justify-center items-center'>
+<h3 className='text-[40px] font-bold'>WHAT'S <span className='text-green-shad2   '>HAPPENING</span></h3>
+              <h3 className='text-center text-[20px]'>
                 The Team at RIF is constantly coming up with helpful <br /> resources
                 from our various programs. Stay glued for updates!
               </h3>
-            </div>
-          </div>
-          {posts?.map((post) => (
+</div>
+      <div className='grid-cols-3 gap-4 grid' >
+      {posts?.map((post) => (
             <EachBlog
               key={post?.id}
               img={post?.data?.featured_image?.url}
@@ -34,9 +26,10 @@ const LatestBlog = ({ posts }) => {
               link={`/blog/${post?.data?.category?.slug}/${post.uid}`}
             />
           ))}
-        </div>
       </div>
-    </section>
+        </div>
+</ContainLayout>
+   
   );
 };
 

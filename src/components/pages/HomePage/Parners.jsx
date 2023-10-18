@@ -1,60 +1,121 @@
-import Link from 'next/link';
-import React from 'react';
+import React from "react";
+import Image from "next/image";
+import ContainLayout from "@/components/layout/ContainerLayout";
+const icons = [
+  "/images/specials/coloredair.svg",
+  "/images/specials/coloredstripe.svg",
+  "/images/specials/coloredcanva.svg",
+  "/images/specials/coloredchase.svg",
+  "/images/specials/coloredtesla2.svg",
+  "/images/specials/coloredtesla1.svg",
+];
 
-const Parners = () => {
+const Airbnb = () => {
   return (
-    <div className='sponsor'>
-      <div className='container'>
-        <h2
-          className='text-center text-[32px]
-                 leading-[49px] lg:text-[62px] lg:leading-[80px]'
-        >
-          Sponsors
-        </h2>
-        <p className='my-7 text-center'>
-          In spite of the tremendous progress we are making daily, we choose to
-          lean on the powerful words of Helen Keller: <br />
-          <q>Alone, we can do so little; together, we can.</q>
-        </p>
-
-        {/* <div className="my-20 ">
-                    <h2></h2>
-                    <div className="row justify-center gap-8 items-center">
-                    <Sponsor />
-                    <Sponsor />
-                    <Sponsor />
-                </div>
-                </div> */}
-
-        <div className='mt-8 flex flex-col items-center gap-7'>
-          <h4>What to become a sponsor?</h4>
-          <p className='text-center'>
-            Click the button below to contact us, and a designated RIF
-            representative will speak with you immediately.
-          </p>
-          <div className='header-link-btn'>
-            <Link href='mailto:contact@rif.ng' className='btn-1'>
-              Become A Sponsor
-              <span></span>
-            </Link>
-          </div>
-        </div>
-      </div>
+    <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
+      <Image
+        width={50}
+        height={50}
+        src={icons[0]}
+        alt="icons"
+        className=" w-fit grayscale-[100] group-hover:grayscale-0 transition-all duration-500 ease-out"
+      />
     </div>
   );
 };
-
-export default Parners;
-
-const Sponsor = ({ img, alt }) => {
+const Stripe = () => {
   return (
-    <div
-      className='owl-item cloned'
-      style={{ width: ' 156px', marginRight: '24px' }}
-    >
-      <div className='sponsore-logo'>
-        <img src='assets/images/brand/brand-03.png' alt='logo' />
-      </div>
+    <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
+      <Image
+        width={50}
+        height={50}
+        src={icons[1]}
+        alt="icons"
+        className=" w-fit grayscale-[100] group-hover:grayscale-0 transition-all duration-500 ease-out"
+      />
     </div>
   );
 };
+const Canva = () => {
+  return (
+    <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
+      <Image
+        width={50}
+        height={50}
+        src={icons[2]}
+        alt="icons"
+        className=" w-fit grayscale-[100] group-hover:grayscale-0 transition-all duration-500 ease-out"
+      />
+    </div>
+  );
+};
+const Chase = () => {
+  return (
+    <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
+      <Image
+        width={50}
+        height={50}
+        src={icons[3]}
+        alt="icons"
+        className=" w-fit grayscale-[100] h-full group-hover:grayscale-0 transition-all duration-500 ease-out"
+      />
+    </div>
+  );
+};
+const Tesla1 = () => {
+  return (
+    <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
+      <Image
+        width={50}
+        height={50}
+        src={icons[5]}
+        alt="icons"
+        className=" w-fit grayscale-[100] h-full group-hover:grayscale-0 transition-all duration-500 ease-out"
+      />
+    </div>
+  );
+};
+const Tesla2 = () => {
+  return (
+    <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
+      <Image
+        width={50}
+        height={50}
+        src={icons[4]}
+        alt="icons"
+        className=" w-fit grayscale-[100] h-full group-hover:grayscale-0 transition-all duration-500 ease-out"
+      />
+    </div>
+  );
+};
+const Partners = () => {
+  return (
+<ContainLayout>
+<div className="mt-20 px-[6%] 5xl:px-[25%]">
+     
+     <div className="overflow-hidden hidden  lg:flex gap-x-8 gap-y-4 lg:gap-x-0 flex-wrap lg:justify-between w-full items-center ">
+       <Airbnb />
+       <Stripe />
+       <Canva />
+       <Chase />
+
+       <Tesla2 />
+       <Tesla1 />
+     </div>
+     <div className="overflow-hidden flex  lg:hidden gap-x-8 gap-y-4 lg:gap-x-0 flex-wrap justify-between w-full items-center ">
+       <Airbnb />
+       <Stripe />
+       <Canva />
+     </div>
+     <div className="overflow-hidden flex mt-6  lg:hidden gap-x-8 gap-y-4 lg:gap-x-0 flex-wrap justify-between w-full items-center ">
+       <Chase />
+
+       <Tesla2 />
+       <Tesla1 />
+     </div>
+   </div>
+</ContainLayout>
+  );
+};
+
+export default Partners;

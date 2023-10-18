@@ -13,15 +13,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        'primary-green-1': '#006837',
-        'primary-green-2': '#A00859',
-        'secondary-green': '#007E47',
-        'primary-gray': '#210276',
-        'primary-blue': '#384D76',
-        'secondary-blue': '#314266',
-        'primary-pink': '#EC268F',
-        'secondary-pink': '#F7ADAF',
-        'primary-orange': '#A8518A',
+        'green-shad1': 'rgb(0,104,55)',
+        'green-shad2': 'rgb(0,126,71)'
       },
       fontFamily: {
         museo: ['MuseoModerno', 'cursive'],
