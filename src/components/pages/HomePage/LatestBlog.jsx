@@ -7,8 +7,8 @@ const LatestBlog = ({ posts }) => {
 <ContainLayout>
 <div className='py-16'>
 <div className='flex flex-col py-6 justify-center items-center'>
-<h3 className='text-[40px] font-bold'>WHAT'S <span className='text-green-shad2   '>HAPPENING</span></h3>
-              <h3 className='text-center text-[20px]'>
+<h3 className='text-[35px]  md:text-[40px] font-bold'>WHAT'S <span className='text-green-shad2   '>HAPPENING</span></h3>
+              <h3 className='md:text-center text-[20px]'>
                 The Team at RIF is constantly coming up with helpful <br /> resources
                 from our various programs. Stay glued for updates!
               </h3>

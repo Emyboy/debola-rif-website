@@ -17,7 +17,7 @@ const index = ({ posts }) => {
       <WhatWeDo />
       <JoinCommunity />
       <LatestBlog posts={posts} />
-      <Parners />
+      {/* <Parners /> */}
     </>
   );
 };

@@ -29,17 +29,17 @@ const Header = () => {
       
      
       </div>
-      <div className={nav? 'fixed top-0 bg-black px-4 left-0 w-[60%]  border-r h-full  border-r-gray-600 ease-out duration-700' :'fixed left-[-100%]   duration-1000' }>
-      <h1 className=' text-3xl p-3 font-bold pt-3 text-[#3e873e] uppercase '> react</h1>
+      <div className={nav? 'fixed top-0 bg-white px-4 left-0 w-[60%] z-50  border-r h-full text-black  border-r-gray-600 ease-out duration-700' :'fixed top-[-100%]   duration-1000' }>
+      <h1 className=' text-3xl p-3 font-bold pt-3 text-[#3e873e] uppercase '> Logo</h1>
 
-        <ul>
-          <li className='p-3 border-gray-600 border-b' >home</li>
-          .<li className='p-3 border-gray-600 border-b'>company</li>
-          <li className='p-3 border-gray-600 border-b'> resources</li>
-          <li className='p-3 border-gray-600 border-b'> about</li>
-
-          <li className='p-3 '> contact</li>
-        </ul>
+      <ul className=" sm:flex text-lg z-50 font-bold text-gray-400">
+        <li className='p-3 cursor-pointer' ><Link href='/'>home</Link></li>
+        <li className='p-3 cursor-pointer'cur><Link href='/who-we-are'>who we are</Link></li>
+        <li className='p-3 cursor-pointer'> <Link href='/past-project'>Past Project</Link></li>
+        <li className='p-3 cursor-pointer'><Link href='/contact-us'> contact us</Link></li>
+        <li className='p-3 '><Link href='/blog'>Blog</Link> </li>
+        <li className='p-3 '><Link href='/impact-report'> Impact project</Link></li>
+      </ul>
       </div>
 
  </div>

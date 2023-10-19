@@ -16,7 +16,7 @@ const JoinCommunity = () => {
 
 <button className='bg-green-shad1 hover:bg-white hover:text-black rounded-md shadow-md font-bold  px-6 py-3 text-white'>Become A Vulunteer</button>
 </div>
-<div className='grid md:grid-cols-1 items-center gap-6'>
+<div className='grid mt-4 md:mt-0 md:grid-cols-1 items-center gap-6'>
   {/* <Image src='/bill-wegener-LqOO5Ko0zSo-unsplash.jpg' className='rounded-md h-full w-full' alt='eop' width='300' height='300' /> */}
   <Image src='/bill-wegener-7MD4DR9jbP0-unsplash.jpg' className='rounded-md ' alt='eop' width='500' height='500' />
 </div>

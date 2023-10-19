@@ -4,9 +4,9 @@ import OtherDetails from "./OtherDetails";
 
 const Index = () => {
     return (
-        <main className="pt-[8rem] bg-green-900 ">
+        <main className=" ">
             <ContactForm />
-            <OtherDetails />
+            {/* <OtherDetails /> */}
         </main>
     );
 };

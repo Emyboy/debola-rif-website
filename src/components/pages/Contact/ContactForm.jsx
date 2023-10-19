@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 // import axios from 'axios';
 import Image from 'next/image';
 import { toast } from 'react-toastify';
+import ContainLayout from '@/components/layout/ContainerLayout';
+import HeroBanner2 from '@/components/layout/HeroLayout';
+import Link from 'next/link';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -41,142 +44,143 @@ const ContactForm = () => {
   };
 
   return (
-    <section className='contact-us grid md:grid-cols-2 px-8 items-center justify-center text-white bg-green-900'>
-      <div>
-        <Image src='/assets/images/home/rif-woman.jpeg' className='rounded-md' alt='lkwd' height='500' width='500'/>
-      </div>
- <div>
- <div
-        className='pattern-layer'
-        style={{
-          backgroundImage: 'url(assets/images/shape/shape-02.png)',
-        }}
-      ></div>
-      <div className='container'>
-        {/* <form onSubmit={handleSubmit} className='row'>
-          <div data-aos='fade-up' className='col-xl-12'>
-            <div className='align-title'>
-              <h5>Contact with us</h5>
-              <h3>
-                Send Us A Message For Our <br /> Next Project
-              </h3>
-            </div>
-          </div>
-          <div className='col-xl-6'>
-            <div>
-              <input
-                onChange={(e) => setName(e.target.value)}
-                data-aos='fade-right'
-                type='text'
-                name='name'
-                className='contuct-us-input'
-                placeholder='Your Name'
-                value={name}
-              />
-            </div>
-          </div>
-          <div className='col-xl-6'>
-            <div>
-              <input
-                onChange={(e) => setEmail(e.target.value)}
-                type='email'
-                name='email'
-                className='contuct-us-input'
-                placeholder='Your Email'
-                data-aos='fade-left'
-                value={email}
-              />
-            </div>
-          </div>
-          <div className='col-xl-6'>
-            <div>
-              <input
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                data-aos='fade-right'
-                type='tel'
-                name='number'
-                value={phoneNumber}
-                className='contuct-us-input'
-                placeholder='Phone Number'
-              />
-            </div>
-          </div>
-          <div className='col-xl-6'>
-            <div>
-              <input
-                data-aos='fade-left'
-                type='text'
-                name='sub'
-                className='contuct-us-input'
-                placeholder='Subject'
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className='col-xl-12'>
-            <div>
-              <textarea
-                onChange={(e) => setMessage(e.target.value)}
-                data-aos='fade-up'
-                name='textarea'
-                className='contuct-us-input contuct-us-textarea'
-                placeholder='Your Message'
-                value={message}
-              ></textarea>
-            </div>
-          </div>
-          <div className='col-xl-12'>
-            <div className='contact-us-btn'>
-              <div>
-                <button
-                  data-aos='fade-up'
-                  type='submit'
-                  className='btn-1 bg-[#00715d]'
-                >
-                  Send Message{' '}
-                  <span
-                    style={{
-                      top: ' 113px',
-                      left: ' 150.766px',
-                    }}
-                  ></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </form> */}
-        <form class="w-full max-w-lg">
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-      <label class="block uppercase tracking-wide  text-white text-xs font-bold mb-2" for="grid-first-name">
-        First Name
-      </label>
-      <input class="appearance-none block w-full bg-gray-200  text-white border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
-      <p class="text-red-500 text-xs italic">Please fill out this field.</p>
-    </div>
-    <div class="w-full md:w-1/2 px-3">
-      <label class="block uppercase tracking-wide  text-white text-xs font-bold mb-2" for="grid-last-name">
-        Last Name
-      </label>
-      <input class="appearance-none block w-full bg-gray-200  text-white border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" />
-    </div>
-  </div>
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full px-3">
-      <label class="block uppercase tracking-wide  text-white text-xs font-bold mb-2" for="grid-password">
-        Password
-      </label>
-      <input class="appearance-none block w-full bg-gray-200  text-white border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************" />
-      <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
-    </div>
-  </div>
+<>
+<HeroBanner2 title='contact us' />
+<ContainLayout>
+ 
+<div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+  <div class="container max-w-screen-lg mx-auto">
+    <div>
+      <h2 class="font-semibold text-xl text-gray-600">Responsive Form</h2>
+      <p class="text-gray-500 mb-6">Form is mobile responsive. Give it a try.</p>
 
-</form>
+      <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
+        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+          <div class="text-gray-600">
+            <p class="font-medium text-lg">Our Contact Details</p>
+            
+        <div className='py-6'>
+        <h2 className='text-lg font-bold'>Email Adress</h2>
+                 <div className=' flex items-center gap-4'>
+                
+                  <p className=''>Mail to</p>
+                  <Link href='mailto:contact@rif.ng'>contact@rif.ng</Link>
+                </div>
+        </div>
+        <div className='py-6'>
+        <h2 className='text-lg font-bold'>Email Address</h2>
+                 <div className=' flex items-center gap-4'>
+                
+                  <p className=''>Mail to</p>
+                  <a href='mailto:contact@rif.ng' />
+                </div>
+        </div>
+                
+          </div>
+
+          <div class="lg:col-span-2">
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+              <div class="md:col-span-5">
+                <label for="full_name">Full Name</label>
+                <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" />
+              </div>
+
+              <div class="md:col-span-5">
+                <label for="email">Email Address</label>
+                <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
+              </div>
+
+              <div class="md:col-span-3">
+                <label for="address">Address / Street</label>
+                <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+              </div>
+
+              <div class="md:col-span-2">
+                <label for="city">City</label>
+                <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="" />
+              </div>
+
+              <div class="md:col-span-2">
+                <label for="country">Country / region</label>
+                <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                  <input name="country" id="country" placeholder="Country" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                  <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
+                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </button>
+                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
+                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="md:col-span-2">
+                <label for="state">State / province</label>
+                <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                  <input name="state" id="state" placeholder="State" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                  <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
+                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                  </button>
+                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
+                    <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="md:col-span-1">
+                <label for="zipcode">Zipcode</label>
+                <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
+              </div>
+
+              <div class="md:col-span-5">
+                <div class="inline-flex items-center">
+                  <input type="checkbox" name="billing_same" id="billing_same" class="form-checkbox" />
+                  <label for="billing_same" class="ml-2">My billing address is different than above.</label>
+                </div>
+              </div>
+
+              <div class="md:col-span-2">
+                <label for="soda">How many soda pops?</label>
+                <div class="h-10 w-28 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-r border-gray-200 transition-all text-gray-500 hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                  <input name="soda" id="soda" placeholder="0" class="px-2 text-center appearance-none outline-none text-gray-800 w-full bg-transparent" value="0" />
+                  <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-500 hover:text-blue-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mx-2 fill-current" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+      
+              <div class="md:col-span-5 text-right">
+                <div class="inline-flex items-end">
+                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-      {/* <ToastContainer /> */}
- </div>
-    </section>
+    </div>
+
+    <a href="https://www.buymeacoffee.com/dgauderman" target="_blank" class="md:absolute bottom-0 right-0 p-4 float-right">
+      {/* <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Buy Me A Coffee" class="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white"> */}
+    </a>
+</div>
+</div>
+</ContainLayout>
+</>
+
   );
 };
 
