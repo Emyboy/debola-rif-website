@@ -29,10 +29,10 @@ const Header = () => {
       
      
       </div>
-      <div className={nav? 'fixed top-0 bg-white px-4 left-0 w-[60%] z-50  border-r h-full text-black  border-r-gray-600 ease-out duration-700' :'fixed top-[-100%]   duration-1000' }>
+      <div className={nav? 'fixed top-0 bg-white px-4 left-0 w-[60%]   border-r h-full text-black  border-r-gray-600 ease-out duration-700' :'fixed top-[-100%]   duration-1000' }>
       <h1 className=' text-3xl p-3 font-bold pt-3 text-[#3e873e] uppercase '> Logo</h1>
 
-      <ul className=" sm:flex text-lg z-50 font-bold text-gray-400">
+      <ul className=" sm:flex text-lg  font-bold text-gray-400">
         <li className='p-3 cursor-pointer' ><Link href='/'>home</Link></li>
         <li className='p-3 cursor-pointer'cur><Link href='/who-we-are'>who we are</Link></li>
         <li className='p-3 cursor-pointer'> <Link href='/past-project'>Past Project</Link></li>
