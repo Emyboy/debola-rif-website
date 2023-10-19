@@ -78,7 +78,7 @@ const Mission = () => {
 <ContainLayout>
      <div className='grid md:grid-cols-2 py-12 items-center gap-10 '>
       <div>
-        <Image src='/assets/iwere-homepage.jpg' className='rounded-md' height='1200' width='1200' alt='ed'  />
+        <Image src='/assets/iwere-banner.jpeg' className='rounded-md' height='1200' width='1200' alt='ed'  />
       </div>
       <div>
         <div>

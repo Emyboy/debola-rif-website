@@ -14,7 +14,7 @@ const CountDown = () => {
           className='bg-green-shad2 h-[10rem] bg-cover bg-left w-full'
           style={{
             color: 'white',
-            backgroundImage: 'url("/assets/iwere-banner-2.jpg")',
+            backgroundImage: 'url("https://images.unsplash.com/photo-1502224562085-639556652f33?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODJ8fGNoYXJpdHl8ZW58MHx8MHx8fDA%3D")',
             backgroundAttachment: 'fixed', // Set the background image as fixed
             backgroundPosition: 'center', // Center the background image
           }}

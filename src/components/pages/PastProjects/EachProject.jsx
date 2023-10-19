@@ -51,10 +51,10 @@ const EachProject = ({ location, date, title, img, link }) => {
   //     </div>
   //   </div>
 
-  <article class="mx-auto max-w-smw-full w-full h-full  shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group" style={{
+  <article class="mx-auto rounded-lg max-w-smw-full w-full h-full  shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group" style={{
     backgroundImage: `url('${img}')`,
   }}>
-  <div class=" backdrop-brightness-50 min-h-150 px-10 flex flex-col pt-96 hover:bg-opacity-75 transform duration-300">
+  <div class=" backdrop-brightness-50 rounded-lg min-h-150 w-full h-full  px-10 flex flex-col pt-96 transform duration-300">
       <h1 class="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
           {date}
       </h1>
