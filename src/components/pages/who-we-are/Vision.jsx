@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import ContainLayout from '@/components/layout/ContainerLayout';
+import Link from 'next/link';
 const Vision = () => {
   return (
     // <section className='about home-three-about bg-white'>
@@ -68,7 +69,8 @@ To become West Africa&apos;s model foundation for indigenous
           
    </p>
    <button className='text-white px-12 font-bold mt-6  py-3 rounded-lg bg-[rgb(0,104,55)] w-fit'>
-     Learn more
+    <Link href='/past-project'>Learn more</Link>
+
     </button>
 </div>
         </div>

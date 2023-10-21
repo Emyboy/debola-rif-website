@@ -1,5 +1,6 @@
 import ContainLayout from '@/components/layout/ContainerLayout';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Mission = () => {
@@ -89,9 +90,9 @@ const Mission = () => {
 To provide physical, mental, and entrepreneurial support to indigenes of the Warri Kingdom, thoroughly equipping them with viable means to thrive in society, and ultimately changing prevailing narratives within the region.
           
    </p>
-   <button className='text-white px-12 font-bold mt-6  py-3 rounded-lg bg-[rgb(0,104,55)] w-fit'>
-     Get in Touch
-    </button>
+<button className='bg-green-shad1 hover:bg-white hover:text-black rounded-md shadow-md font-bold  px-6 py-3 text-white'>
+  <Link href='/contact-us'>Get in Touch</Link>
+   </button>
 </div>
         </div>
       </div>

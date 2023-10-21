@@ -4,6 +4,7 @@ import moment from 'moment';
 import Image from 'next/image';
 import RichText from '../../RichText';
 import HeroBanner2 from '@/components/layout/HeroLayout';
+import ContainLayout from '@/components/layout/ContainerLayout';
 
 const ProjectDetail = ({ details }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -34,7 +35,8 @@ const ProjectDetail = ({ details }) => {
           .map((item) => item.image.url)}
       />
   <HeroBanner2 title='project Details' />
-  <div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-2 xl:grid-cols-2">
+<ContainLayout>
+<div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-2 xl:grid-cols-2">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="causes-image-container cause-details-container relative">
             <Image
@@ -55,6 +57,18 @@ const ProjectDetail = ({ details }) => {
             </p>
           </div>
         </div>
+        <div className="bg-white rounded-lg shadow-lg">
+          <div className="p-4">
+            <h3 className="text-xl font-bold text-green-shad2">{details?.data?.title}</h3>
+            <RichText field={details?.data?.description} />
+          </div>
+        </div>
+
+        </div>
+
+ 
+
+       
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="p-4">
             <h3 className="text-xl font-semibold">Images from the Event</h3>
@@ -88,19 +102,8 @@ const ProjectDetail = ({ details }) => {
             ))}
           </div>
         </div>
-        </div>
-
- 
-
-        <div className="bg-white rounded-lg shadow-lg">
-          <div className="p-4">
-            <h3 className="text-xl font-bold text-green-shad2">{details?.data?.title}</h3>
-            <RichText field={details?.data?.description} />
-          </div>
-        </div>
-
-    
       </div>
+</ContainLayout>
       {/* Add Modal component here */}
     </>
   );
