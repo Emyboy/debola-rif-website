@@ -2,6 +2,7 @@ import { Link } from 'lucide-react';
 import { useRouter } from 'next/router';
 import EachReport from './EachReport';
 import HeroBanner2 from '@/components/layout/HeroLayout';
+import ContainLayout from '@/components/layout/ContainerLayout';
 
 const Report = ({ posts, totalPages }) => {
   const router = useRouter();
@@ -18,7 +19,8 @@ const Report = ({ posts, totalPages }) => {
   return (
     <>
     <HeroBanner2 title='impact Report' />
-  <div className='my-6'>
+<ContainLayout>
+<div className='my-6'>
   <div className='container mx-auto'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6'>
           {posts.map((post) => (
@@ -34,9 +36,8 @@ const Report = ({ posts, totalPages }) => {
               <h3 className='text-xl font-semibold mt-4'>{post?.data?.title}</h3>
               <p className='text-gray-600'>{post.data.short_description}</p>
               <div className='mt-4'>
-                <Link href={post?.data?.report?.url} className='text-[#F65024] hover:underline'>
-                  Read More
-                </Link>
+                <a  href={post?.data?.report?.url} className='text-red-400 underline'>    Read More</a>
+              
               </div>
             </div>
           ))}
@@ -64,6 +65,7 @@ const Report = ({ posts, totalPages }) => {
         </div>
       </div>
   </div>
+</ContainLayout>
     </>
   );
 };

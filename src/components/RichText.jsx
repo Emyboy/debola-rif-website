@@ -26,7 +26,7 @@ const RichText = ({ field }) => {
           </h2>
         ),
         heading3: ({ children }) => (
-          <h3 className='font-poppins text-[17px] font-semibold'>{children}</h3>
+          <h3 className='font-poppins text-[17px] font-bold text-green-shad1'>{children}</h3>
         ),
         heading4: ({ children }) => (
           <h3 className='font-poppins text-[16px] font-semibold'>{children}</h3>

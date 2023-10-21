@@ -18,7 +18,7 @@ const CategoryPage = ({ blogPosts, totalPages }) => {
       {router.isFallback ? (
         <></>
       ) : (
-        <Blog posts={blogPosts} totalPages={totalPages} />
+        <Blog posts={blogPosts}  totalPages={totalPages} />
       )}
     </Layout>
   );

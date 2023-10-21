@@ -70,9 +70,10 @@ const EachProject = ({ location, date, title, img, link }) => {
           {location}
        
       </p>
-      {/* <Link href={link}>
+    
+      <Link href={link} className='text-white font-bold hover:text-green-shad2'>
             Read More <i className='flaticon-arrow-right text-white'></i>
-          </Link> */}
+          </Link>
   </div>
 </article>
   );

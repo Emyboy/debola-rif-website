@@ -8,7 +8,7 @@ const LeftSection = ({ categories, recentPosts }) => {
 
   return (
     <div className='col-xl-4 col-lg-4'>
-      <div className='causes-details-card bg-white p-4 rounded-lg shadow-lg'>
+      <div className='causes-details-card p-4 rounded-lg '>
         <div className='causes-tabs mb-6'>
           <button
             onClick={() => setActiveTab('categories')}
@@ -16,20 +16,20 @@ const LeftSection = ({ categories, recentPosts }) => {
               activeTab === 'categories' ? 'active' : ''
             }`}
           >
-            Categories
+           <h4 className='text-[30px] text-green-shad2 font-bold py-5 '>categories</h4>
           </button>
-          <button
+          {/* <button
             onClick={() => setActiveTab('related')}
             className={`tab-btn ${
               activeTab === 'related' ? 'active' : ''
             }`}
-          >
+          > <br />
             Related Blog
-          </button>
+          </button> */}
         </div>
         <div className='causes-content'>
           {activeTab === 'categories' ? (
-            <ul className='causes-categories'>
+            <ul className='causes-categories text-lg font-bold text-green-shad2'>
               {categories?.map((category) => (
                 <li key={category.id}>
                   <a href={`/blog/${category?.uid}`}>

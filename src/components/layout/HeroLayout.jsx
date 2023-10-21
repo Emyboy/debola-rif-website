@@ -2,8 +2,8 @@ import React from 'react'
 
 const HeroBanner2 = ({ title }) => {
     return (
-        <div className=" bg-cover  bg-top  md:h-[70vh]  h-[100%]   w-[100%] md:w-[100%] "
-            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1473649085228-583485e6e4d7?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fGNoYXJpdHl8ZW58MHx8MHx8fDA%3D")' }}
+        <div className=" bg-cover  bg-top  md:h-[80vh]  h-[100%]   w-[100%] md:w-[100%] "
+            style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1485110168560-69d4ac37b23e?auto=format&fit=crop&q=80&w=1480&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")' }}
         >
      <div className='w-full h-full backdrop-brightness-50'>
      <div className='flex justify-center items-center'>
