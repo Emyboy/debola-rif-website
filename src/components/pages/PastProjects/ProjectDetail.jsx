@@ -35,7 +35,7 @@ const ProjectDetail = ({ details }) => {
           .map((item) => item.image.url)}
       />
   <HeroBanner2 title='project Details' />
-<ContainLayout>
+<ContainLayout >
 <div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-2 xl:grid-cols-2">
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="causes-image-container cause-details-container relative">

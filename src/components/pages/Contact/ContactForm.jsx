@@ -60,51 +60,36 @@ Next Project</p>
           <div class="text-gray-600">
             <p class="font-medium text-lg">Our Contact Details</p>
             
-        <div className='py-6'>
-        <h2 className='text-lg font-bold'>Email Adress</h2>
-                 <div className=' flex items-center gap-4'>
-                
-                  <p className=''>Mail to</p>
-                  <Link href='mailto:contact@rif.ng'>contact@rif.ng</Link>
-                </div>
-        </div>
-        <div className='py-6'>
-        <h2 className='text-lg font-bold'>Email Address</h2>
-                 <div className=' flex items-center gap-4'>
-                
-                  <p className=''>Mail to</p>
-                  <a href='mailto:contact@rif.ng' />
-                </div>
-        </div>
+     
                 
           </div>
 
           <div class="lg:col-span-2">
             <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
               <div class="md:col-span-5">
-                <label for="full_name">Full Name</label>
+                <label for="full_name" className='font-bold'>Full Name</label>
                 <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  />
               </div>
 
               <div class="md:col-span-5">
-                <label for="email">Email Address</label>
+                <label for="email" className='font-bold'>Email Address</label>
                 <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" />
               </div>
 
               <div class="md:col-span-3">
-                <label for="address">phoneNumber</label>
+                <label for="address" className='font-bold'>phoneNumber</label>
                 <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="" />
               </div>
 
               <div class="md:col-span-2">
-                <label for="city">Subject</label>
+                <label for="city" className='font-bold'>Subject</label>
                 <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="" />
               </div>
 
 
               <div className='w-full'>
-                <label for="city">Subject</label>
-            <textarea name="" id="" class=" border mt-1 rounded px-4 bg-gray-50" cols="90" rows="10"></textarea>
+                <label for="city" className='font-bold'>Message</label>
+            <textarea name="" id="" class=" border mt-1 rounded px-4 bg-gray-50" cols="60" rows="10"></textarea>
               </div>
       
               <div class="md:col-span-5 text-right">

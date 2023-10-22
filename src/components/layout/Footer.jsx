@@ -27,7 +27,7 @@ const Footer = () => {
 
         <div className="md:col-span-2  pt-6 md:pt-0 md:grid md:gap-16 md:grid-cols-4 ">
           <div className="pb-4 md:pb-0" >
-            <h6 className="font-bold text-green-shad2">Company</h6>
+            <h6 className="font-bold text-green-shad2">logo</h6>
             <ul>
               <h3 className="text-[#5c5860a8] font-semibold">This foundation was born out of a strategic rethink of the Warri Kingdom from the lens of its people, its socio-economic potential and the limitless possibilities for growth and advancement via education and upskilling across various demographics.</h3>
             </ul>
