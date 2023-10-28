@@ -20,12 +20,8 @@ const Whoweare = () => {
    RIF, an African non profit organisation founded in 2023, aims to
           assist the Warri Kingdom by effectively tackling obstacles and
           vulnerabilities that could hinder the state's continuous development
-          and its capacity to compete internationally. RIF, an African non
-          profit organisation founded in 2023, aims to assist the Warri Kingdom
-          by effectively tackling obstacles and vulnerabilities that could
-          hinder the state's continuous development and its capacity to compete
-          internationally.
-          
+          and its capacity to compete internationally.
+
    </p>
    <p className='text-[16px] pt-6'>
    "RIF is a restorative mission to re-engineer the mindsets of indigenes

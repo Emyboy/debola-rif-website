@@ -11,7 +11,8 @@ const features = [
   },
   {
     alt: 'leadership',
-    image: '/assets/images/feature/Leadership_Logo-1.gif',
+    image:
+      'https://media.premiumtimesng.com/wp-content/files/2015/10/Leadership-newspapers.png',
     link: 'https://leadership.ng/olu-of-warri-launches-royal-iwere-society-as-iyatsere-team-emerges-ball-point-winner/',
   },
   {
@@ -38,44 +39,42 @@ const features = [
 
 const FeatureIn = ({ featured_in }) => {
   return (
-<ContainLayout>
-<section className=' py-12  px-5'>
-      <div className='container relative mx-auto '>
-      <div className='mx-auto flex flex-col '>
-<h3 className='text-[40px] font-bold'> <span className='text-green-shad2   '>Feauture in </span></h3>
-</div>
-        <div className="overflow-hidden hidden py-8 lg:flex gap-x-8 gap-y-4 lg:gap-x-0 flex-wrap lg:justify-between w-full items-center ">
-          {featured_in?.map((feature) => (
-            <FeatureCard
-              key={feature.id}
-              image={feature?.data?.logo?.url}
-              link={feature?.data?.link}
-            />
-          ))}
+    <ContainLayout>
+      <section className=' px-5  py-12'>
+        <div className='container relative mx-auto '>
+          <div className='mx-auto flex flex-col '>
+            <h3 className='text-[40px] font-bold'>
+              {' '}
+              <span className='text-green-shad2   '>Feauture in </span>
+            </h3>
+          </div>
+          <div className='hidden w-full flex-wrap items-center gap-x-8 gap-y-4 overflow-hidden py-8 lg:flex lg:justify-between lg:gap-x-0 '>
+            {featured_in?.map((feature) => (
+              <FeatureCard
+                key={feature.id}
+                image={feature?.data?.logo?.url}
+                link={feature?.data?.link}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-</ContainLayout>
+      </section>
+    </ContainLayout>
   );
-}; 
+};
 
 const FeatureCard = ({ image, link, alt }) => {
   return (
-    <Link
-      href={link}
-      target='_blank'
-      className='relative    '
-    >
-      
-      <div className="relative h-[40px] group max-w-[75px] lg:max-w-[120px]">
-      <Image
-        width={50}
-        height={50}
-        src={image}
-        alt="icons"
-        className=" w-fit grayscale-[100] h-full group-hover:grayscale-0 transition-all duration-500 ease-out"
-      />
-    </div>
+    <Link href={link} target='_blank' className='relative    '>
+      <div className='group relative h-[40px] max-w-[75px] lg:max-w-[120px]'>
+        <Image
+          width={50}
+          height={50}
+          src={image}
+          alt='icons'
+          className=' h-full w-fit object-contain grayscale-[100] transition-all duration-500 ease-out group-hover:grayscale-0'
+        />
+      </div>
     </Link>
   );
 };
