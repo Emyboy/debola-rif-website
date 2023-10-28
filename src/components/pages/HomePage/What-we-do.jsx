@@ -7,7 +7,7 @@ const Whatwedo = () => {
   return (
     <ContainerLayout>
             <div className='mx-auto flex flex-col justify-center items-center'>
-      <h3 className='text-[40px] font-bold'>WHO WE <span className='text-green-shad2   '>DO</span></h3>
+      <h3 className='text-[40px] font-bold'>WHAT WE <span className='text-green-shad2   '>DO</span></h3>
       <p className='text-[18px] text-center'>We Are Primarily Focused On Areas That Border On The Following;</p>
       </div>
       <div className='grid mx-auto py-10 place-items-center gap-6 md:grid-cols-4'>
