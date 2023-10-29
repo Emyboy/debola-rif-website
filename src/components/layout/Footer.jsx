@@ -9,27 +9,16 @@ const Footer = () => {
     <div className='bg-[rgb(234,216,217)] pt-8 text-white'>
       <ContainLayout>
         <div className='container items-center  justify-center px-6 md:flex   '>
-          {/* <div className="flex flex-col">
-          <Image
-            width={167.04}
-            height={48}
-            src="/images/Logo.svg"
-            alt="logo"
-          />
-
-          <p className="mt-4 text-[#5c5860a8] text-[16px]">
-            Harness the power of the digital realm with our transformative web
-            applications. Our expert developers leverage the latest technologies
-            and industry best practices to craft highly functional, visually
-            stunning, and user-friendly web applications.
-          </p>
-        </div> */}
-
-          <div className='py-12  md:col-span-2 md:grid md:grid-cols-4 md:gap-16 md:pt-0 '>
-            <div className='pb-4 md:pb-0'>
-              <h6 className='font-bold text-green-shad2'>logo</h6>
+          <div className='py-16  md:col-span-2 md:grid md:grid-cols-4 md:gap-16 md:pt-0 '>
+            <div className='grid gap-4 pb-4 md:pb-0'>
+              <Image
+                src={'/assets/images/logo.png'}
+                alt='royal iwere foundation'
+                width={200}
+                height={100}
+              />
               <ul>
-                <h3 className='font-semibold text-[#5c5860a8]'>
+                <h3 className=' text-[#5c5860a8]'>
                   This foundation was born out of a strategic rethink of the
                   Warri Kingdom from the lens of its people, its socio-economic
                   potential and the limitless possibilities for growth and
@@ -61,7 +50,7 @@ const Footer = () => {
                 Contact
               </h6>
               <ul>
-                <li className='py-2 text-[16px] font-medium capitalize text-[#5c5860a8]'>
+                <li className='py-2 text-[16px] font-medium  text-[#5c5860a8]'>
                   <Link href='mailto:contact@rif.ng'>contact@rif.ng</Link>
                 </li>
 
@@ -75,7 +64,7 @@ const Footer = () => {
                 Social media
               </h6>
               <ul className='grid w-[11rem] grid-cols-4 items-center justify-center pb-3  md:pb-0'>
-                <li className='py-2 text-[16px] font-medium capitalize text-[#5c5860a8]'>
+                {/* <li className='py-2 text-[16px] font-medium capitalize text-[#5c5860a8]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     className='w-6'
@@ -83,7 +72,7 @@ const Footer = () => {
                   >
                     <path d='M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z' />
                   </svg>
-                </li>
+                </li> */}
                 <li className='py-2 text-[16px] font-medium capitalize text-[#5c5860a8]'>
                   <a href='https://www.linkedin.com/company/royal-iwere-foundation/'>
                     <svg
@@ -95,7 +84,7 @@ const Footer = () => {
                     </svg>
                   </a>
                 </li>
-                <li className='py-2 text-[16px]  font-medium capitalize text-[#5c5860a8]'>
+                {/* <li className='py-2 text-[16px]  font-medium capitalize text-[#5c5860a8]'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     className='w-6'
@@ -103,7 +92,7 @@ const Footer = () => {
                   >
                     <path d='M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z' />
                   </svg>
-                </li>
+                </li> */}
                 <li className='py-2 text-[16px]  font-medium capitalize text-[#5c5860a8]'>
                   <a href='https://www.instagram.com/royaliwerefoundation/'>
                     <svg
@@ -120,6 +109,10 @@ const Footer = () => {
           </div>
         </div>
       </ContainLayout>
+      <div className='flex items-center justify-center bg-green-shad2 py-3 text-[20px]'>
+        Copyright &copy; {new Date().getFullYear()}. Royal Iwere Foundation. All
+        rights reserved
+      </div>
     </div>
   );
 };
