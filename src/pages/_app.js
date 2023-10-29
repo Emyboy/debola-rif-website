@@ -1,5 +1,3 @@
-
-
 import Head from 'next/head';
 import SEO from '@/METADATA';
 import AOS from 'aos';
@@ -37,7 +35,9 @@ export default function App({ Component, pageProps }) {
           type: SEO.openGraph.type,
         }}
       />
-      <Component {...pageProps} />
+      <div className='font-poppins'>
+        <Component {...pageProps} />
+      </div>
       <ToastContainer />
     </>
   );

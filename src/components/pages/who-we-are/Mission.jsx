@@ -5,7 +5,7 @@ import React from 'react';
 
 const Mission = () => {
   return (
-    <ContainLayout className={'mx-0 w-full bg-gray-300 py-8'}>
+    <ContainLayout className={'mx-0 w-full  bg-[#f2f1f1bf] py-16'}>
       <div className='grid items-center gap-10  py-12 md:grid-cols-2'>
         <div>
           <Image

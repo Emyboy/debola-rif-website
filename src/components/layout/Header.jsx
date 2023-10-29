@@ -20,10 +20,10 @@ const Header = () => {
   const links = [
     { text: 'Home', href: '/' },
     { text: 'Who We Are', href: '/who-we-are' },
-    { text: 'Past Project', href: '/past-project' },
+    { text: 'Past Projects', href: '/past-project' },
     { text: 'Contact Us', href: '/contact-us' },
     { text: 'Blog', href: '/blog' },
-    { text: 'Impact Project', href: '/impact-report' },
+    { text: 'Impact Report', href: '/impact-report' },
   ];
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const Header = () => {
       <div className='bg-white shadow-lg'>
         <div className='h-25  container mx-auto  flex max-w-[1240] items-center  justify-between px-5 py-4 capitalize '>
           <Image src={'/rif-logo.svg'} width={200} height={100} />
-          <ul className='hidden font-bold text-gray-400 sm:flex'>
+          <ul className='hidden font-semibold text-gray-400 sm:flex'>
             {links.map((link, index) => (
               <li
                 key={index}

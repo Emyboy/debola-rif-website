@@ -14,11 +14,12 @@ module.exports = {
       },
       colors: {
         'green-shad1': 'rgb(0,104,55)',
-        'green-shad2': 'rgb(0,126,71)'
+        'green-shad2': 'rgb(0,126,71)',
       },
       fontFamily: {
         museo: ['MuseoModerno', 'cursive'],
         yeseva: ['Yeseva One', 'cursive'],
+        poppins: ['Poppins', 'sans-serif'],
         'open-sans': ['Open Sans', 'sans-serif'],
       },
     },

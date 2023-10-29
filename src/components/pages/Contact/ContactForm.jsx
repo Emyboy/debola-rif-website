@@ -6,113 +6,217 @@ import { toast } from 'react-toastify';
 import ContainLayout from '@/components/layout/ContainerLayout';
 import HeroBanner2 from '@/components/layout/HeroLayout';
 import Link from 'next/link';
+import { useFormik } from 'formik';
+import * as yup from 'yup';
+import { BiLoaderAlt } from 'react-icons/bi';
 
 const ContactForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [subject, setSubject] = useState('');
-  const [message, setMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const validationSchema = yup.object({
+    email: yup
+      .string()
+      .email('Please enter a valid email')
+      .required('Email is required'),
+    name: yup
+      .string()
+      .required('Full name is required. Please enter your full name'),
+    phoneNumber: yup.string(),
+    subject: yup
+      .string()
+      .required('Subject is required. Please enter a subject for the mail'),
+    message: yup
+      .string()
+      .required('Message is required. Please enter a message'),
+  });
 
-    const data = {
-      email,
-      name,
-      phoneNumber,
-      subject,
-      message,
-    };
-
-    try {
-      const res = await toast.promise(
-        axios.post('/api/contact', {
-          email,
-          name,
-          phoneNumber,
-          subject,
-          message,
-        }),
-        {
-          pending: ` We are processing your request.`,
-          success: 'Thanks for reaching out to us! we get in touch shortly',
-          error: 'Oops. an error occured please try again',
-        }
-      );
-    } catch (error) {}
-  };
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      name: '',
+      phoneNumber: '',
+      subject: '',
+      message: '',
+    },
+    onSubmit: async (values) => {
+      try {
+        const res = await toast.promise(
+          axios.post('/api/contact', {
+            ...values,
+          }),
+          {
+            pending: ` We are processing your request.`,
+            success: 'Thanks for reaching out to us! we get in touch shortly',
+            error: 'Oops. an error occured please try again',
+          }
+        );
+      } catch (error) {
+        toast.error('Something went wrong. Please try again');
+      }
+    },
+    validationSchema,
+  });
 
   return (
-<>
-<HeroBanner2 title='contact us' />
-<ContainLayout>
- 
-<div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
-  <div class="container max-w-screen-lg mx-auto">
-    <div>
-      <h2 class="font-semibold text-xl text-gray-600">contact  us</h2>
-      <p class="text-gray-500 mb-6 text-[20px] font-museo">Send Us A Message For Our
-Next Project</p>
+    <>
+      <HeroBanner2 title='Contact us' />
+      <ContainLayout>
+        <div class='flex min-h-screen items-center justify-center bg-gray-100 p-6'>
+          <div class='container mx-auto max-w-screen-lg'>
+            <div>
+              {/* <h2 class='font-museo text-[40px] font-semibold text-gray-600'>
+                Contact us
+              </h2> */}
+              <h2 class='mb-6 font-poppins text-[30px] text-gray-500'>
+                Send Us A Message For Our Next Project
+              </h2>
 
-      <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
-        <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
-          <div class="text-gray-600">
-            <p class="font-medium text-lg">Our Contact Details</p>
-            
-     
-                
-          </div>
+              <form class='mb-6 rounded bg-white p-4 px-4 shadow-lg md:p-8'>
+                <div class=''>
+                  <div class='lg:col-span-2'>
+                    <div class='grid grid-cols-1 gap-4  text-sm md:grid-cols-4'>
+                      <InputField
+                        className={'md:col-span-4'}
+                        id={'name'}
+                        label={'Full Name'}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        isError={
+                          formik.touched.name && Boolean(formik.errors.name)
+                        }
+                        errorMessage={formik.errors.name}
+                        required={true}
+                        value={formik.values.name}
+                      />
+                      <InputField
+                        className={'md:col-span-4'}
+                        id={'email'}
+                        type={'email'}
+                        label={'Email Address'}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        isError={
+                          formik.touched.email && Boolean(formik.errors.email)
+                        }
+                        errorMessage={formik.errors.email}
+                        required={true}
+                        value={formik.values.email}
+                      />
 
-          <div class="lg:col-span-2">
-            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
-              <div class="md:col-span-5">
-                <label for="full_name" className='font-bold'>Full Name</label>
-                <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  />
-              </div>
+                      {/* <div class='md:col-span-5'>
+                        <label for='email' className='font-bold'>
+                          Email Address
+                        </label>
+                        <input
+                          type='text'
+                          name='email'
+                          id='email'
+                          class='mt-1 h-[52px] w-full rounded border bg-gray-50 px-4'
+                          placeholder='email@domain.com'
+                        />
+                      </div> */}
 
-              <div class="md:col-span-5">
-                <label for="email" className='font-bold'>Email Address</label>
-                <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="email@domain.com" />
-              </div>
+                      <InputField
+                        className={'md:col-span-2'}
+                        id={'phoneNumber'}
+                        label={'Phone Number'}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        isError={
+                          formik.touched.phoneNumber &&
+                          Boolean(formik.errors.phoneNumber)
+                        }
+                        errorMessage={formik.errors.phoneNumber}
+                        value={formik.values.phoneNumber}
+                      />
+                      <InputField
+                        className={'md:col-span-2'}
+                        id={'subject'}
+                        label={'Subject'}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        isError={
+                          formik.touched.subject &&
+                          Boolean(formik.errors.subject)
+                        }
+                        errorMessage={formik.errors.subject}
+                        required={true}
+                        value={formik.values.subject}
+                      />
 
-              <div class="md:col-span-3">
-                <label for="address" className='font-bold'>phoneNumber</label>
-                <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="" />
-              </div>
+                      <div className='grid gap-2 md:col-span-4'>
+                        <label
+                          for='city'
+                          className='flex items-center gap-2 font-bold'
+                        >
+                          <span>Message</span>{' '}
+                          <span className='text-red-400'>*</span>
+                        </label>
+                        <textarea
+                          id='message'
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
+                          class=' mt-1 h-[350px] w-full rounded border bg-gray-50 px-4 py-3 outline-none'
+                        ></textarea>
+                        {formik.touched.message &&
+                          Boolean(formik.errors.message) &&
+                          formik.errors.message && (
+                            <p className='font-inter text-[12px] text-red-500 '>
+                              {formik.errors.message}
+                            </p>
+                          )}
+                      </div>
 
-              <div class="md:col-span-2">
-                <label for="city" className='font-bold'>Subject</label>
-                <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"  placeholder="" />
-              </div>
-
-
-              <div className='w-full'>
-                <label for="city" className='font-bold'>Message</label>
-            <textarea name="" id="" class=" border mt-1 rounded px-4 bg-gray-50" cols="60" rows="10"></textarea>
-              </div>
-      
-              <div class="md:col-span-5 text-right">
-                <div class="inline-flex items-end">
-                  <button class="bg-green-shad2 hover:bg-green-shad1 text-white font-bold py-2 px-4 rounded">Submit</button>
+                      <div class=' md:col-span-5'>
+                        <button class='h-[42px] w-full rounded bg-green-shad2 px-4 py-2 text-[18px] font-bold text-white hover:bg-green-shad1'>
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-
+              </form>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <a href="https://www.buymeacoffee.com/dgauderman" target="_blank" class="md:absolute bottom-0 right-0 p-4 float-right">
-      {/* <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Buy Me A Coffee" class="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white"> */}
-    </a>
-</div>
-</div>
-</ContainLayout>
-</>
-
+      </ContainLayout>
+    </>
   );
 };
 
 export default ContactForm;
+
+const InputField = ({
+  id,
+  onChange,
+  onBlur,
+  type,
+  placeholder,
+  label,
+  className,
+  errorMessage,
+  isError,
+  required,
+  value,
+}) => {
+  return (
+    <div class={`grid gap-2 ${className}`}>
+      <label for={id} className='flex items-center gap-2 font-bold'>
+        <span>{label}</span>
+        {required && <span className='text-red-400'>*</span>}
+      </label>
+      <input
+        type={type || 'text'}
+        onBlur={onBlur}
+        onChange={onChange}
+        id={id}
+        value={value}
+        class='mt-1 h-[52px] w-full rounded border bg-gray-50 px-4 outline-none focus:border-none'
+        placeholder={placeholder}
+      />
+      {isError && errorMessage && (
+        <p className='font-inter text-[12px] text-red-500 '>{errorMessage}</p>
+      )}
+    </div>
+  );
+};

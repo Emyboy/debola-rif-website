@@ -5,7 +5,7 @@ import React from 'react';
 
 const JoinCommunity = () => {
   return (
-    <div className='bg-gray-300 py-16'>
+    <div className='bg-[#f2f1f1bf] py-16'>
       <ContainLayout>
         <div className='grid items-center md:grid-cols-2'>
           <div className='lg:max-w-[500px]'>
@@ -13,12 +13,12 @@ const JoinCommunity = () => {
               Become A{' '}
               <span className='text-green-shad2   '> Volunteer Today</span>
             </h2>
-            <p className='text-[17px]'>
+            <p className='text-justify text-[17px] leading-[150%]'>
               The best way to find yourself is to lose yourself in the service
               of others. These are wise words by revered Mahatma Gandhi.{' '}
             </p>
 
-            <p className='py-3'>
+            <p className='py-3 text-justify text-[17px] leading-[150%]'>
               Are you an established entrepreneur, teacher, or upcoming
               professional? Do you see the beautiful work we do at RIF, and do
               you believe you can make a firm contribution with your efforts? We

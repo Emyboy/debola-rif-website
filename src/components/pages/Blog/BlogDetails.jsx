@@ -9,7 +9,6 @@ import HeroBanner2 from '@/components/layout/HeroLayout';
 import SoftBlogDetail from './SoftBlogDetail';
 
 const BlogDetails = ({ blog, categories, recentPosts }) => {
-  console.log(recentPosts);
   return (
     <>
 
@@ -48,9 +47,9 @@ const BlogDetails = ({ blog, categories, recentPosts }) => {
         <div className='md:col-span-2'>
           <div >
             <div
-              
+
             >
-          
+
               <div >
                 <img
                   src={blog?.data.featured_image.url}
@@ -72,7 +71,7 @@ const BlogDetails = ({ blog, categories, recentPosts }) => {
               <h3>{blog?.data?.title}</h3>
             </div>
 
-            
+
           </div>
         </div>
               </div>
@@ -89,7 +88,7 @@ const BlogDetails = ({ blog, categories, recentPosts }) => {
        <SoftBlogDetail
         title={post?.data?.title}
        link={post.data.href}
-    
+
        />
         </div>
       ))
@@ -98,7 +97,7 @@ const BlogDetails = ({ blog, categories, recentPosts }) => {
 
         </div>
 
-       
+
       </section>
 
     </>

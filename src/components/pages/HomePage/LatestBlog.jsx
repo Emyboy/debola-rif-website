@@ -3,6 +3,7 @@ import EachBlog from '../Blog/EachBlog';
 import ContainLayout from '@/components/layout/ContainerLayout';
 
 const LatestBlog = ({ posts }) => {
+
   return (
     <ContainLayout>
       <div className='py-16'>
@@ -24,7 +25,7 @@ const LatestBlog = ({ posts }) => {
               writer={'Admin'}
               title={post?.data?.title}
               content={post?.data.short_description}
-              createdDate={'20 Feb 2022'}
+              createdDate={post?.first_publication_date}
               link={`/blog/${post?.data?.category?.slug}/${post.uid}`}
             />
           ))}
