@@ -17,7 +17,7 @@ const Focus = () => {
         <ReuseableCard
           imageSrc='/raise-hand.png'
           imageAlt='de'
-          title='Combating militancy to promote positive youth engagement'
+          title='Promote positive youth engagement'
           className='max-w-[450px]'
         />
         <ReuseableCard
