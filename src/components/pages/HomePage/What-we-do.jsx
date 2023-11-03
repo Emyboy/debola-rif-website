@@ -1,5 +1,5 @@
 import ContainerLayout from '@/components/layout/ContainerLayout';
-import React from 'react';
+import React, from 'react';
 import Image from 'next/image';
 import ReuseableCard from '@/components/ReuseableCard';
 
