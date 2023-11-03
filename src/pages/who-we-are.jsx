@@ -18,7 +18,6 @@ const WhoWeAre = ({ featured_in }) => {
 };
 
 export default WhoWeAre;
-
 export const getStaticProps = async ({ previewData }) => {
   const client = createClient({ previewData });
 

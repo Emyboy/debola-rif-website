@@ -5,77 +5,32 @@ import React from 'react';
 
 const EachProject = ({ location, date, title, img, link }) => {
   return (
-  //   <div className='col-xl-4 col-lg-2 relative mt-2 h-[450px] w-[100%] max-w-[350px]'>
-  //     <div
-  //       className='causes-card
-  //      event-card wow
-
-  // fadeInUp animated relative h-full '
-  //       data-wow-delay='00ms'
-  //       data-wow-duration='1500ms'
-  //       style={{
-  //         visibility: 'visible',
-  //         animationDuration: '1500ms',
-  //         animationDelay: '0ms',
-  //         animationName: 'fadeInUp',
-  //         background: 'linear-gradient(to top, black, transparent)',
-  //       }}
-  //     >
-  //       <div className='causes-image blog-image event-image'>
-  //         <img src={img} alt={title} />
-  //       </div>
-  //       <div className='blog-contant event-content'>
-  //         <div className='header-link-btn'>
-  //           <a className='btn-1'>
-  //             {date}
-  //             <span></span>
-  //           </a>
-  //         </div>
-  //         <div className='comments'>
-  //           <ul>
-  //             {/* <li><i className="fa fa-clock"></i> <span>{ }</span></li> */}
-  //             <li>
-  //               <i className='flaticon-pin'></i> <span> {location}</span>
-  //             </li>
-  //           </ul>
-  //         </div>
-  //         <Link href={link} className='hover-content'>
-  //           {title}
-  //         </Link>
-  //         <div className='blog-btn event-btn opacity-btn'>
-  //           <Link href={link}>
-  //             Read More <i className='flaticon-arrow-right'></i>
-  //           </Link>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-
-  <article class="mx-auto rounded-lg max-w-smw-full w-full h-full z-0  shadow-xl bg-cover bg-center min-h-150 transform duration-500 hover:-translate-y-2 cursor-pointer group" style={{
-    backgroundImage: `url('${img}')`,
-  }}>
-  <div class=" backdrop-brightness-50 z-0 rounded-lg min-h-150 w-full h-full  px-10 flex flex-col pt-96 transform duration-300">
-      <h1 class="text-white text-3xl mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
+    <article
+      class='max-w-smw-full min-h-150 group z-0 mx-auto h-full  w-full transform cursor-pointer rounded-lg bg-cover bg-center shadow-xl duration-500 hover:-translate-y-2'
+      style={{
+        backgroundImage: `url('${img}')`,
+      }}
+    >
+      <div class=' min-h-150 z-0 flex h-full w-full transform  flex-col rounded-lg px-10 pt-96 backdrop-brightness-50 duration-300'>
+        <h1 class='mb-5 translate-y-20 transform text-3xl text-white duration-300 group-hover:translate-y-0'>
           {date}
-      </h1>
-      <div class="w-16 h-2 bg-yellow-500 rounded-full mb-5 transform translate-y-20 group-hover:translate-y-0 duration-300">
-      </div>
-      <p class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500">
-     
+        </h1>
+        <div class='mb-5 h-2 w-16 translate-y-20 transform rounded-full bg-yellow-500 duration-300 group-hover:translate-y-0'></div>
+        <p class='transform text-xl text-white opacity-0 duration-500 group-hover:opacity-80'>
           {title}
-       
-      </p>
-      <p class="opacity-0 text-white text-xl group-hover:opacity-80 transform duration-500">
-     
+        </p>
+        <p class='transform text-xl text-white opacity-0 duration-500 group-hover:opacity-80'>
           {location}
-       
-      </p>
-    
-      <Link href={link} className='text-white font-bold hover:text-green-shad2'>
-            Read More <i className='flaticon-arrow-right text-white'></i>
-          </Link>
-  </div>
-</article>
+        </p>
+
+        <Link
+          href={link}
+          className='font-bold text-white hover:text-green-shad2'
+        >
+          Read More <i className='flaticon-arrow-right text-white'></i>
+        </Link>
+      </div>
+    </article>
   );
 };
 

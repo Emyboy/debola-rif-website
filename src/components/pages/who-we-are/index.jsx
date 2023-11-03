@@ -18,7 +18,6 @@ const WhoWeAre = ({ featured_in }) => {
       <Focus />
       <Mission />
       <Vision />
-     
       <FeatureIn featured_in={featured_in} />
     </>
   );

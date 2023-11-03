@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { AiOutlineClose, AiOutlineMenuFold } from 'react-icons/ai';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -19,10 +20,10 @@ const Header = () => {
   const links = [
     { text: 'Home', href: '/' },
     { text: 'Who We Are', href: '/who-we-are' },
-    { text: 'Past Project', href: '/past-project' },
+    { text: 'Past Projects', href: '/past-project' },
     { text: 'Contact Us', href: '/contact-us' },
     { text: 'Blog', href: '/blog' },
-    { text: 'Impact Project', href: '/impact-report' },
+    { text: 'Impact Report', href: '/impact-report' },
   ];
 
   useEffect(() => {
@@ -37,14 +38,16 @@ const Header = () => {
   return (
     <main>
       <div className='bg-white shadow-lg'>
-        <div className='max-w-[1240]  py-4 flex  justify-between items-center container  capitalize h-25 mx-auto px-5 '>
-          <h1 className=' '>Logo</h1>
-          <ul className='hidden sm:flex font-bold text-gray-400'>
+        <div className='h-25  container mx-auto  flex max-w-[1240] items-center  justify-between px-5 py-4 capitalize '>
+          <Image src={'/rif-logo.svg'} width={200} height={100} />
+          <ul className='hidden font-semibold text-gray-400 sm:flex'>
             {links.map((link, index) => (
               <li
                 key={index}
-                className={`p-3 cursor-pointer ${
-                  activeLink === index ? 'active-link text-green-shad1  border-green-shad2 border-b-2' : ''
+                className={`cursor-pointer p-3 ${
+                  activeLink === index
+                    ? 'active-link border-b-2  border-green-shad2 text-green-shad1'
+                    : ''
                 }`}
                 onClick={() => handleLinkClick(index)}
               >
@@ -55,12 +58,12 @@ const Header = () => {
           <div onClick={handleClick} className='block sm:hidden'>
             {!nav ? (
               <AiOutlineMenuFold
-                className='fixed right-0 mr-5 ease-in-out duration-700'
+                className='fixed right-0 mr-5 duration-700 ease-in-out'
                 size={30}
               />
             ) : (
               <AiOutlineClose
-                className='fixed right-0 mr-5 ease-in-out duration-700'
+                className='fixed right-0 mr-5 duration-700 ease-in-out'
                 size={30}
               />
             )}
@@ -68,37 +71,37 @@ const Header = () => {
           <div
             className={
               nav
-                ? 'fixed top-0 bg-black px-4 left-0 w-full z-[999]  border-r h-fit text-black  border-r-gray-600 ease-out duration-700'
+                ? 'fixed left-0 top-0 z-[999] h-fit w-full border-r  border-r-gray-600 bg-black px-4  text-black duration-700 ease-out'
                 : 'fixed top-[-100%]   duration-1000'
             }
           >
-            <div onClick={handleClick} className='block mt-10 sm:hidden'>
+            <div onClick={handleClick} className='mt-10 block sm:hidden'>
               {!nav ? (
                 <AiOutlineMenuFold
-                  className='fixed right-0 mr-5 text-white ease-in-out duration-700'
+                  className='fixed right-0 mr-5 text-white duration-700 ease-in-out'
                   size={30}
                 />
               ) : (
                 <AiOutlineClose
-                  className='fixed text-white right-0 mr-5 ease-in-out duration-700'
+                  className='fixed right-0 mr-5 text-white duration-700 ease-in-out'
                   size={30}
                 />
               )}
             </div>
-            <h1 className=' text-3xl p-3 font-bold pt-3 text-[#3e873e] uppercase '>
+            <h1 className=' p-3 pt-3 text-3xl font-bold uppercase text-[#3e873e] '>
               Logo
             </h1>
-            <ul className='sm:flex text-lg font-bold text-gray-400'>
-              <li className='p-3 cursor-pointer'>
+            <ul className='text-lg font-bold text-gray-400 sm:flex'>
+              <li className='cursor-pointer p-3'>
                 <Link href='/'>Home</Link>
               </li>
-              <li className='p-3 cursor-pointer'>
+              <li className='cursor-pointer p-3'>
                 <Link href='/who-we-are'>Who We Are</Link>
               </li>
-              <li className='p-3 cursor-pointer'>
+              <li className='cursor-pointer p-3'>
                 <Link href='/past-project'>Past Project</Link>
               </li>
-              <li className='p-3 cursor-pointer'>
+              <li className='cursor-pointer p-3'>
                 <Link href='/contact-us'>Contact Us</Link>
               </li>
               <li className='p-3 '>
