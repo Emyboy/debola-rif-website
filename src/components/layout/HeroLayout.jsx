@@ -3,7 +3,7 @@ import React from 'react';
 const HeroBanner2 = ({ title, backgroundImage }) => {
   return (
     <div
-      className=' h-[100%]  w-[100%]  bg-cover  bg-top   md:h-[80vh] md:w-[100%] '
+      className=' h-[50vh]  w-[100%]  bg-cover  bg-top   md:h-[80vh] md:w-[100%] '
       style={{
         backgroundImage: backgroundImage
           ? `url(${backgroundImage})`

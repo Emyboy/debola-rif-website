@@ -1,17 +1,34 @@
+import React, { useEffect, useState } from 'react';
 import ContainLayout from '@/components/layout/ContainerLayout';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
 const JoinCommunity = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
+
   return (
     <div className='bg-[#f2f1f1bf] py-16'>
       <ContainLayout>
-        <div className='grid items-center md:grid-cols-2'>
-          <div className='lg:max-w-[500px]'>
+        <div
+
+          className='grid items-center md:grid-cols-2'
+
+
+        >
+          <div
+          className='grid items-center md:grid-cols-2'
+      data-aos='fade-right'
+      data-aos-offset='100' // Adjust the offset as needed
+          className='lg:max-w-[500px]'>
             <h2 className='text-bold py-4 text-[35px] font-bold '>
               Become A{' '}
-              <span className='text-green-shad2   '> Volunteer Today</span>
+              <span className='text-green-shad2'> Volunteer Today</span>
             </h2>
             <p className='text-justify text-[17px] leading-[150%]'>
               The best way to find yourself is to lose yourself in the service
@@ -25,19 +42,25 @@ const JoinCommunity = () => {
               encourage you to join us.
             </p>
 
-            <button className='rounded-md bg-green-shad1 px-6 py-3 font-bold text-white  shadow-md hover:bg-white hover:text-black'>
-              <Link href='/contact-us'>Become A Vulunteer</Link>{' '}
+            <button
+            
+              className='rounded-md bg-green-shad1 px-6 py-3 font-bold text-white shadow-md hover:bg-white hover:text-black'
+            >
+              <Link href='/contact-us'>Become A Volunteer</Link>
             </button>
           </div>
           <div className='mt-4 grid items-center gap-6 md:mt-0 md:grid-cols-1'>
-            {/* <Image src='/bill-wegener-LqOO5Ko0zSo-unsplash.jpg' className='rounded-md h-full w-full' alt='eop' width='300' height='300' /> */}
-            <Image
-              src='/bill-wegener-7MD4DR9jbP0-unsplash.jpg'
-              className='rounded-md '
-              alt='eop'
-              width='500'
-              height='500'
-            />
+            <div
+       data-aos="fade-left"
+            >
+              <Image
+                src='/bill-wegener-7MD4DR9jbP0-unsplash.jpg'
+                className='rounded-md '
+                alt='eop'
+                width='500'
+                height='500'
+              />
+            </div>
           </div>
         </div>
       </ContainLayout>

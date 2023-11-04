@@ -1,11 +1,17 @@
 import moment from 'moment';
 import Image from 'next/image';
-
+import AOS from 'aos';
+import { useEffect } from 'react';
+import 'aos/dist/aos.css';
 const { default: Link } = require('next/link');
 
 const EachBlog = ({ createdDate, title, content, link, img, alt, writer }) => {
+  useEffect(() => {
+    AOS.init(); // Initialize AOS
+  }, []);
+  
   return (
-    <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+    <div data-aos="zoom-in" className="bg-white shadow-lg rounded-lg overflow-hidden">
       <Link href={link || '#'}>
         <Image
           src={img}

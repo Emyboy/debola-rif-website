@@ -18,7 +18,8 @@ const Whatwedo = () => {
         <ReuseableCard
           imageSrc='/raise-hand.png'
           imageAlt='de'
-          title='Promote positive youth engagement'
+          title='Promote positive youth engagement' 
+          className='data-aos="zoom-out-up"'
         />
         <ReuseableCard
           imageSrc='/assets/mortarboard.png'

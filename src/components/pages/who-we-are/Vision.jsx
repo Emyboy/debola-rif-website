@@ -1,8 +1,14 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import ContainLayout from '@/components/layout/ContainerLayout';
 import Link from 'next/link';
 const Vision = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     // <section className='about home-three-about bg-white'>
     //   <div className='container '>
@@ -56,7 +62,7 @@ const Vision = () => {
     <ContainLayout>
      <div className='grid md:grid-cols-2 py-12 items-center gap-10 '>
 
-      <div>
+      <div  data-aos="flip-up">
         <div>
        <p className='text-[20px] font-yeseva'> Vision</p>
        <h3 className='text-[40px] font-bold'>Vision <span className='text-green-shad2   '>Statement</span></h3>
@@ -75,7 +81,7 @@ To become West Africa&apos;s model foundation for indigenous
 </div>
         </div>
       </div>
-      <div>
+      <div data-aos="fade-left">
         <Image src='/assets/iwere-homepage.jpg' className='rounded-md' height='1200' width='1200' alt='ed'  />
       </div>
       </div>

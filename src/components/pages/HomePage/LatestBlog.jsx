@@ -18,7 +18,7 @@ const LatestBlog = ({ posts }) => {
         </div>
         <div className='grid gap-4 md:grid-cols-3'>
           {posts?.map((post) => (
-            <EachBlog
+            <EachBlog 
               key={post?.id}
               img={post?.data?.featured_image?.url}
               alt={post?.data?.featured_image?.alt}

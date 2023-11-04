@@ -1,13 +1,19 @@
 import ContainLayout from '@/components/layout/ContainerLayout';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Mission = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <ContainLayout className={'mx-0 w-full  bg-[#f2f1f1bf] py-16'}>
-      <div className='grid items-center gap-10  py-12 md:grid-cols-2'>
-        <div>
+      <div className='grid items-center gap-10  py-12 md:grid-cols-2'  >
+        <div  data-aos="flip-up">
           <Image
             src='/assets/iwere-banner.jpeg'
             className='rounded-md'
@@ -16,7 +22,7 @@ const Mission = () => {
             alt='ed'
           />
         </div>
-        <div>
+        <div data-aos="fade-left">
           <div>
             <p className='font-yeseva text-[20px]'> Mission</p>
             <h3 className='text-[40px] font-bold'>
