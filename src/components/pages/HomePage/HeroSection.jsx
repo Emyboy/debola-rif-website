@@ -16,7 +16,9 @@ const HeroBanner = ({ title, subtitle, children, description }) => {
             <h3 className='font-poppins text-[50px] font-bold text-white'>
               RIF- ROYAL IWERE FOUNDATION
             </h3>
-            <p className='text-[20px] text-white'>Educate. Enlighten. Empowr</p>
+            <p className='text-[20px] text-white'>
+              Educate. Enlighten. Empower
+            </p>
             <button className='mt-6 h-[40px] w-fit rounded-lg  bg-[rgb(0,104,55)] px-12 text-[1.2rem] font-bold text-white'>
               <Link href='/contact-us'> Contact us </Link>
             </button>
