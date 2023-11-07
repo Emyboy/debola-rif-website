@@ -7,36 +7,41 @@ const { default: Link } = require('next/link');
 
 const EachBlog = ({ createdDate, title, content, link, img, alt, writer }) => {
   useEffect(() => {
-    AOS.init(); // Initialize AOS
+    AOS.init({
+      once: true,
+    }); // Initialize AOS
   }, []);
-  
+
   return (
-    <div data-aos="zoom-in" className="bg-white shadow-lg rounded-lg overflow-hidden">
+    <div
+      data-aos='zoom-in'
+      className='overflow-hidden rounded-lg bg-white shadow-lg'
+    >
       <Link href={link || '#'}>
         <Image
           src={img}
           alt={alt}
           width='500'
           height='500'
-          className="w-full h-48 object-cover"
+          className='h-48 w-full object-cover'
         />
       </Link>
-      <div className="p-6">
-        <div className="mb-4">
+      <div className='p-6'>
+        <div className='mb-4'>
           <Link href={link || '#'}>
-            <h2 className="text-xl font-semibold text-gray-800 hover:text-green-shad2">
+            <h2 className='text-xl font-semibold text-gray-800 hover:text-green-shad2'>
               {title}
             </h2>
           </Link>
         </div>
-        <p className="text-gray-600 text-sm mb-4">
-          {content}
-        </p>
-        <div className="flex items-center">
+        <p className='mb-4 text-sm text-gray-600'>{content}</p>
+        <div className='flex items-center'>
           <Link href={link || '#'}>
-            <span className=" hover:text-green-shad2 hover:underline">Read more</span>
+            <span className=' hover:text-green-shad2 hover:underline'>
+              Read more
+            </span>
           </Link>
-          <span className="text-gray-400 ml-auto">
+          <span className='ml-auto text-gray-400'>
             {moment(createdDate).format('MMMM DD, YYYY')}
           </span>
         </div>

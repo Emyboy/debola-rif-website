@@ -6,7 +6,9 @@ import ContainLayout from '@/components/layout/ContainerLayout';
 import Link from 'next/link';
 const Vision = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, []);
   return (
     <ContainLayout>
