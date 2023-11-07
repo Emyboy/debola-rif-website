@@ -14,7 +14,7 @@ const HeroBanner2 = ({ title, backgroundImage }) => {
         <div className='grid h-full w-full place-items-center'>
           <div className=' '>
             <div className=" flex w-full flex-col items-center justify-center gap-2   font-['Fiori_Dorati']">
-              <h1 className='h-[45.59%] whitespace-nowrap py-3 text-center font-museo text-6xl    font-bold text-white md:text-[120px] lg:text-[150px] '>
+              <h1 className='h-[45.59%] whitespace-nowrap py-3 text-center font-museo text-[30px]    font-bold text-white md:text-[120px] lg:text-[60px] '>
                 {title}
               </h1>
             </div>

@@ -61,17 +61,14 @@ const ContactForm = () => {
     <>
       <HeroBanner2 title='Contact us' />
       <ContainLayout>
-        <div class='flex min-h-screen items-center justify-center bg-gray-100 p-6'>
+        <div class='flex min-h-screen items-center justify-center bg-gray-100 p-2 lg:p-6'>
           <div class='container mx-auto max-w-screen-lg'>
             <div>
-              {/* <h2 class='font-museo text-[40px] font-semibold text-gray-600'>
-                Contact us
-              </h2> */}
-              <h2 class='mb-6 font-poppins text-[30px] text-gray-500'>
+              <h2 class='mb-6 font-poppins text-[20px] text-gray-500 lg:text-[40px]'>
                 Send Us A Message For Our Next Project
               </h2>
 
-              <form class='mb-6 rounded bg-white p-4 px-4 shadow-lg md:p-8'>
+              <form class='mb-6 rounded bg-white p-4  shadow-lg md:p-8'>
                 <div class=''>
                   <div class='lg:col-span-2'>
                     <div class='grid grid-cols-1 gap-4  text-sm md:grid-cols-4'>

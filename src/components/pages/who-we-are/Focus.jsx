@@ -6,10 +6,10 @@ const Focus = () => {
   return (
     <ContainLayout>
       <div className='mx-auto flex flex-col '>
-        <h3 className='text-[40px] font-bold'>
+        <h3 className='text-[20px] font-bold lg:text-[40px]'>
           <span className='text-green-shad2   '>Focus</span>
         </h3>
-        <p className='text-[18px] '>
+        <p className='text-[16px] lg:text-[18px] '>
           RIF Is Focused On Achieving Five Objectives
         </p>
       </div>

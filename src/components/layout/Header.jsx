@@ -21,9 +21,9 @@ const Header = () => {
     { text: 'Home', href: '/' },
     { text: 'Who We Are', href: '/who-we-are' },
     { text: 'Past Projects', href: '/past-project' },
-    { text: 'Contact Us', href: '/contact-us' },
-    { text: 'Blog', href: '/blog' },
     { text: 'Impact Report', href: '/impact-report' },
+    { text: 'Blog', href: '/blog' },
+    { text: 'Contact Us', href: '/contact-us' },
   ];
 
   useEffect(() => {
@@ -112,14 +112,15 @@ const Header = () => {
               <li className='cursor-pointer p-3'>
                 <Link href='/past-project'>Past Project</Link>
               </li>
-              <li className='cursor-pointer p-3'>
-                <Link href='/contact-us'>Contact Us</Link>
+
+              <li className='p-3 '>
+                <Link href='/impact-report'>Impact Project</Link>
               </li>
               <li className='p-3 '>
                 <Link href='/blog'>Blog</Link>
               </li>
-              <li className='p-3 '>
-                <Link href='/impact-report'>Impact Project</Link>
+              <li className='cursor-pointer p-3'>
+                <Link href='/contact-us'>Contact Us</Link>
               </li>
             </ul>
           </div>

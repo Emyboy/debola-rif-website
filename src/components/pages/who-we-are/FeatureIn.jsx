@@ -9,7 +9,7 @@ const FeatureIn = ({ featured_in }) => {
       <section className=' px-5  py-12'>
         <div className='container relative mx-auto '>
           <div className='mx-auto flex flex-col '>
-            <h3 className='text-[40px] font-bold'>
+            <h3 className='text-[20px] font-bold lg:text-[40px]'>
               {' '}
               <span className='text-green-shad2   '>Feauture in </span>
             </h3>

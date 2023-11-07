@@ -6,12 +6,15 @@ import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 const EachProject = ({ location, date, title, img, link }) => {
   useEffect(() => {
-    AOS.init(); // Initialize AOS
+    AOS.init({
+      once: true,
+    }); // Initialize AOS
   }, []);
   return (
-    <article  data-aos="fade-right"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine"
+    <article
+      data-aos='fade-right'
+      data-aos-offset='300'
+      data-aos-easing='ease-in-sine'
       class='max-w-smw-full min-h-150 group z-0 mx-auto h-full  w-full transform cursor-pointer rounded-lg bg-cover bg-center shadow-xl duration-500 hover:-translate-y-2'
       style={{
         backgroundImage: `url('${img}')`,

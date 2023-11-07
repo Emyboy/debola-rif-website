@@ -9,11 +9,11 @@ const HeroSection = () => {
 
       <div className='mx-auto flex flex-col items-center py-16'>
         <p className='font-yeseva text-[20px]'> who we are </p>
-        <h3 className='text-[40px] font-bold'>
+        <h3 className='text-[25px] font-bold lg:text-[40px]'>
           Royal Iwere{' '}
           <span className='text-green-shad2   '>Foundation (RIF) </span>
         </h3>
-        <div className='mt-6 text-center font-bold text-gray-500 md:max-w-[900px]'>
+        <div className='mt-6 px-2 text-center font-bold text-gray-500 md:max-w-[900px]'>
           <p className='text-[16px]'>
             RIF, an African non profit organisation founded in 2023, aims to
             assist the Warri Kingdom by effectively tackling obstacles and
@@ -43,8 +43,11 @@ const HeroSection = () => {
           <div className='w-full py-12 backdrop-brightness-50'>
             <ContainLayout>
               <div className='flex flex-col items-center justify-center py-6 text-center'>
-                <p className='font-yeseva text-[20px]'> our origin </p>
-                <h3 className='text-[40px] font-bold'>
+                <p className='font-yeseva text-[18px] lg:text-[20px]'>
+                  {' '}
+                  our origin{' '}
+                </p>
+                <h3 className='text-[20px] font-bold lg:text-[40px]'>
                   How Did RIF Come To Be
                 </h3>
               </div>
@@ -59,16 +62,16 @@ const HeroSection = () => {
                     height='600'
                   />
                 </div>
-                <div className=''>
-                  <span className='text-[30px] font-bold text-white'>
+                <div className='text-justify'>
+                  <span className='text-[20px] font-bold text-white lg:text-[30px]'>
                     Ogiame Atuwatse III
                   </span>
                   ,{' '}
-                  <p className='py-4 font-bold'>
-                    the paramount ruler of the Kingdom of Warri and the 21st Olu
+                  <p className='py-4 font-semibold'>
+                    The paramount ruler of the Kingdom of Warri and the 21st Olu
                     of Warri declared in his coronation address to the world:
                   </p>
-                  <p className='font-bold'>
+                  <p className='font-semibold'>
                     {' '}
                     &quot; We will look to honour our women; we will encourage
                     them, build them up and support them in realising their
@@ -83,7 +86,7 @@ const HeroSection = () => {
                     the growth and development of the Itsekiri Nation. So I say
                     to our women today, you will no longer be invisible&quot;
                   </p>
-                  <p className='py-6 font-bold'>
+                  <p className='py-6 font-semibold'>
                     Upon this declaration, Olori Atuwatse III, driven by a like
                     passion for the mothers and children of Iwere Land and the
                     Warri Kingdom, birthed The Royal Iwere Foundation (RIF).

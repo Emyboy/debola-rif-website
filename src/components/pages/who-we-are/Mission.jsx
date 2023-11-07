@@ -12,8 +12,8 @@ const Mission = () => {
 
   return (
     <ContainLayout className={'mx-0 w-full  bg-[#f2f1f1bf] py-16'}>
-      <div className='grid items-center gap-10  py-12 md:grid-cols-2'  >
-        <div  data-aos="flip-up">
+      <div className='grid items-center gap-10  py-12 md:grid-cols-2'>
+        <div data-aos='flip-up'>
           <Image
             src='/assets/iwere-banner.jpeg'
             className='rounded-md'
@@ -22,11 +22,11 @@ const Mission = () => {
             alt='ed'
           />
         </div>
-        <div data-aos="fade-left">
+        <div data-aos='fade-left'>
           <div>
-            <p className='font-yeseva text-[20px]'> Mission</p>
-            <h3 className='text-[40px] font-bold'>
-              Mission <span className='text-green-shad2   '>Statement</span>
+            <p className='font-yeseva text-[18px] lg:text-[20px]'> Mission</p>
+            <h3 className='text-[20px] font-bold lg:text-[40px]'>
+              Mission <span className='t  text-green-shad2 '>Statement</span>
             </h3>
             <div className='mt-6 md:max-w-[500px] '>
               <p className='text-[16px]'>
