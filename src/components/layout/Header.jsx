@@ -40,7 +40,7 @@ const Header = () => {
       <div className='bg-white shadow-lg'>
         <div className='h-25  container mx-auto  flex max-w-[1240] items-center  justify-between px-5 py-4 capitalize '>
           <Image src={'/rif-logo.svg'} width={200} height={100} />
-          <ul className='hidden font-semibold text-gray-400 sm:flex'>
+          <ul className='hidden font-semibold text-gray-400 lg:flex'>
             {links.map((link, index) => (
               <li
                 key={index}
@@ -55,15 +55,15 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <div onClick={handleClick} className='block sm:hidden'>
+          <div onClick={handleClick} className='block lg:hidden'>
             {!nav ? (
               <AiOutlineMenuFold
-                className='fixed right-0 mr-5 duration-700 ease-in-out'
+                className=' right-0 mr-5 duration-700 ease-in-out'
                 size={30}
               />
             ) : (
               <AiOutlineClose
-                className='fixed right-0 mr-5 duration-700 ease-in-out'
+                className=' right-0 mr-5 duration-700 ease-in-out'
                 size={30}
               />
             )}
@@ -71,27 +71,28 @@ const Header = () => {
           <div
             className={
               nav
-                ? 'fixed left-0 top-0 z-[999] h-fit w-full border-r  border-r-gray-600 bg-black px-4  text-black duration-700 ease-out'
+                ? 'fixed left-0 top-0 z-[999] h-fit w-full border-r  border-r-gray-600 bg-gray-200 px-4  text-black duration-700 ease-out'
                 : 'fixed top-[-100%]   duration-1000'
             }
           >
-            <div onClick={handleClick} className='mt-10 block sm:hidden'>
+            <div
+              onClick={handleClick}
+              className='mt-10 block cursor-pointer sm:hidden'
+            >
               {!nav ? (
                 <AiOutlineMenuFold
-                  className='fixed right-0 mr-5 text-white duration-700 ease-in-out'
+                  className='fixed right-0 mr-5 text-black duration-700 ease-in-out'
                   size={30}
                 />
               ) : (
                 <AiOutlineClose
-                  className='fixed right-0 mr-5 text-white duration-700 ease-in-out'
+                  className='fixed right-0 mr-5 text-black duration-700 ease-in-out'
                   size={30}
                 />
               )}
             </div>
-            <h1 className=' p-3 pt-3 text-3xl font-bold uppercase text-[#3e873e] '>
-              Logo
-            </h1>
-            <ul className='text-lg font-bold text-gray-400 sm:flex'>
+            <Image src={'/assets/images/logo.png'} width={200} height={100} />
+            <ul className='py-3 text-lg font-bold text-gray-700 sm:flex'>
               <li className='cursor-pointer p-3'>
                 <Link href='/'>Home</Link>
               </li>

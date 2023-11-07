@@ -14,11 +14,11 @@ const Whatwedo = () => {
           We are primarily focused on areas that border the following:
         </p>
       </div>
-      <div className='mx-auto grid place-items-center gap-6 py-10 md:grid-cols-4'>
+      <div className='mx-auto grid place-items-center gap-6 py-10 md:grid-cols-2 lg:grid-cols-4'>
         <ReuseableCard
           imageSrc='/raise-hand.png'
           imageAlt='de'
-          title='Promote positive youth engagement' 
+          title='Promote positive youth engagement'
           className='data-aos="zoom-out-up"'
         />
         <ReuseableCard

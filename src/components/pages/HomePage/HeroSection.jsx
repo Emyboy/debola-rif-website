@@ -13,10 +13,10 @@ const HeroBanner = ({ title, subtitle, children, description }) => {
       <div className='h-full w-full backdrop-brightness-50'>
         <ContainLayout>
           <div className='flex flex-col py-[18rem]'>
-            <h3 className='font-poppins text-[50px] font-bold text-white'>
+            <h3 className='font-poppins text-[24px] font-bold text-white md:text-[30px] lg:text-[50px]'>
               RIF- ROYAL IWERE FOUNDATION
             </h3>
-            <p className='text-[20px] text-white'>
+            <p className='text-[17px] text-white lg:text-[20px]'>
               Educate. Enlighten. Empower
             </p>
             <button className='mt-6 h-[40px] w-fit rounded-lg  bg-[rgb(0,104,55)] px-12 text-[1.2rem] font-bold text-white'>

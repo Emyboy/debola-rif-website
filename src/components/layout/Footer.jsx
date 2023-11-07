@@ -19,17 +19,15 @@ const Footer = () => {
               />
               <ul>
                 <h3 className=' text-[#5c5860a8]'>
-                  This foundation was born out of a strategic rethink of the
-                  Warri Kingdom from the lens of its people, its socio-economic
-                  potential and the limitless possibilities for growth and
-                  advancement via education and upskilling across various
-                  demographics.
+                  Educate. Enlighten. Empower
                 </h3>
               </ul>
             </div>
 
             <div className='pb-4 md:pb-0'>
-              <h6 className='font-bold text-green-shad2'>Quick Link</h6>
+              <h6 className='text-[18px] font-bold text-green-shad2 lg:text-[20px]'>
+                Quick Link
+              </h6>
               <ul>
                 <li className='py-2 text-[16px] font-medium capitalize text-[#5c5860a8]'>
                   <Link href='/'> Home </Link>
@@ -46,7 +44,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className='pb-4 md:pb-0'>
-              <h6 className='text-[20px] font-bold text-green-shad2'>
+              <h6 className='text-[18px] font-bold text-green-shad2 lg:text-[20px]'>
                 Contact
               </h6>
               <ul>
@@ -60,7 +58,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className='pb-4 md:pb-0'>
-              <h6 className='text-[20px] font-bold text-green-shad2'>
+              <h6 className='text-[18px] font-bold text-green-shad2 lg:text-[20px]'>
                 Social media
               </h6>
               <ul className='grid w-[11rem] grid-cols-4 items-center justify-center pb-3  md:pb-0'>
@@ -109,7 +107,7 @@ const Footer = () => {
           </div>
         </div>
       </ContainLayout>
-      <div className='flex items-center justify-center bg-green-shad2 py-3 text-[20px]'>
+      <div className='flex items-center justify-center bg-green-shad2 py-3 lg:text-[20px]'>
         Copyright &copy; {new Date().getFullYear()}. Royal Iwere Foundation. All
         rights reserved
       </div>
