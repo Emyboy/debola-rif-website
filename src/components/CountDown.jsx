@@ -25,7 +25,7 @@ const CountDown = () => {
         >
           {/* Text Content Container */}
           <div className='flex h-full w-full flex-wrap items-center justify-center  px-5 backdrop-brightness-50'>
-            <div className='flex items-center justify-between gap-7 lg:w-[80%]'>
+            <div className='flex flex-wrap items-center justify-center gap-7 lg:w-[80%] lg:justify-between'>
               <div>
                 <CountUp
                   className='text-[40px] font-bold'

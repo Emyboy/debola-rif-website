@@ -10,7 +10,7 @@ const Footer = () => {
       <ContainLayout>
         <div className='container items-center  justify-center px-6 md:flex   '>
           <div className='py-16  md:col-span-2 md:grid md:grid-cols-4 md:gap-16 md:pt-0 '>
-            <div className='grid gap-4 pb-4 md:pb-0'>
+            <div className='grid gap-2 pb-4 md:pb-0'>
               <Image
                 src={'/assets/images/logo.png'}
                 alt='royal iwere foundation'
@@ -107,7 +107,7 @@ const Footer = () => {
           </div>
         </div>
       </ContainLayout>
-      <div className='flex items-center justify-center bg-green-shad2 py-3 lg:text-[20px]'>
+      <div className='flex items-center justify-center bg-green-shad2 py-3 text-center lg:text-[20px]'>
         Copyright &copy; {new Date().getFullYear()}. Royal Iwere Foundation. All
         rights reserved
       </div>

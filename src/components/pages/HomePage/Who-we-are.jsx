@@ -16,8 +16,11 @@ const Whoweare = () => {
           </div>
           <div>
             <div>
-              <p className='font-yeseva text-[20px]'> Welcome to RIF</p>
-              <h3 className='text-[40px] font-bold'>
+              <p className='font-yeseva text-[16px] lg:text-[20px]'>
+                {' '}
+                Welcome to RIF
+              </p>
+              <h3 className=' text-[20px] font-bold lg:text-[40px]'>
                 WHO WE <span className='text-green-shad2'>ARE</span>
               </h3>
               <div className='mt-6 md:max-w-[500px]'>

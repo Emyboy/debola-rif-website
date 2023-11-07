@@ -39,7 +39,12 @@ const Header = () => {
     <main>
       <div className='bg-white shadow-lg'>
         <div className='h-25  container mx-auto  flex max-w-[1240] items-center  justify-between px-5 py-4 capitalize '>
-          <Image src={'/rif-logo.svg'} width={200} height={100} />
+          <Image
+            src={'/rif-logo.svg'}
+            alt='royal iwere foundation'
+            width={200}
+            height={100}
+          />
           <ul className='hidden font-semibold text-gray-400 lg:flex'>
             {links.map((link, index) => (
               <li
@@ -91,7 +96,12 @@ const Header = () => {
                 />
               )}
             </div>
-            <Image src={'/assets/images/logo.png'} width={200} height={100} />
+            <Image
+              src={'/assets/images/logo.png'}
+              alt='royal iwere foundation'
+              width={200}
+              height={100}
+            />
             <ul className='py-3 text-lg font-bold text-gray-700 sm:flex'>
               <li className='cursor-pointer p-3'>
                 <Link href='/'>Home</Link>

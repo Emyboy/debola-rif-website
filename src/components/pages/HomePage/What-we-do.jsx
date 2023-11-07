@@ -7,7 +7,7 @@ const Whatwedo = () => {
   return (
     <ContainerLayout className={'py-12'}>
       <div className='mx-auto flex flex-col items-center justify-center'>
-        <h3 className='text-[40px] font-bold'>
+        <h3 className='text-[20px] font-bold lg:text-[40px]'>
           WHAT WE <span className='text-green-shad2   '>DO</span>
         </h3>
         <p className='text-center text-[18px]'>
