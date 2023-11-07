@@ -7,7 +7,9 @@ import 'aos/dist/aos.css';
 
 const JoinCommunity = () => {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      once: true,
+    });
   }, []);
 
   return (
