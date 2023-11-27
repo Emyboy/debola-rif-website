@@ -15,9 +15,9 @@ const JoinCommunity = () => {
   return (
     <div className='bg-[#f2f1f1bf] py-16'>
       <ContainLayout>
-        <div className='grid items-center md:grid-cols-2'>
+        <div className='flex flex-wrap justify-center gap-16 md:grid-cols-2'>
           <div
-            className='grid items-center md:grid-cols-2'
+            className='grid items-center lg:w-[50%]'
             data-aos='fade-right'
             data-aos-offset='100' // Adjust the offset as needed
           >
@@ -37,7 +37,7 @@ const JoinCommunity = () => {
               encourage you to join us.
             </p>
 
-            <button className='rounded-md bg-green-shad1 px-6 py-3 font-bold text-white shadow-md hover:bg-white hover:text-black'>
+            <button className='w-fit rounded-md bg-green-shad1 px-6 py-3 font-bold text-white shadow-md hover:bg-white hover:text-black'>
               <Link href='/contact-us'>Become A Volunteer</Link>
             </button>
           </div>
