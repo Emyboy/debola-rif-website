@@ -21,7 +21,7 @@ const Main = ({ projects, totalPages }) => {
       <ContainLayout>
         <div className='blog events event-page'>
           <div className='container'>
-            <div className='my-12 grid  gap-6 md:grid-cols-2 lg:grid-cols-3    '>
+            <div className='my-12 grid justify-center gap-6 md:grid-cols-2 lg:grid-cols-3    '>
               {projects.map((project) => (
                 <EachProject
                   link={`/past-project/${project.uid}`}

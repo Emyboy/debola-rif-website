@@ -76,13 +76,13 @@ const Header = () => {
           <div
             className={
               nav
-                ? 'fixed left-0 top-0 z-[999] h-fit w-full border-r  border-r-gray-600 bg-gray-200 px-4  text-black duration-700 ease-out'
+                ? 'fixed left-0 top-0 z-[999] grid h-fit w-full border-r  border-r-gray-600 bg-gray-200 px-4  text-black duration-700 ease-out'
                 : 'fixed top-[-100%]   duration-1000'
             }
           >
             <div
               onClick={handleClick}
-              className='mt-10 block cursor-pointer sm:hidden'
+              className='mt-10 block cursor-pointer lg:hidden'
             >
               {!nav ? (
                 <AiOutlineMenuFold
@@ -102,7 +102,7 @@ const Header = () => {
               width={200}
               height={100}
             />
-            <ul className='py-3 text-lg font-bold text-gray-700 sm:flex'>
+            <ul className='py-3 text-lg font-bold text-gray-700 '>
               <li className='cursor-pointer p-3'>
                 <Link href='/'>Home</Link>
               </li>
