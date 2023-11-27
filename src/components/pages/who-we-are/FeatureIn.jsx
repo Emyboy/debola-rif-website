@@ -11,7 +11,7 @@ const FeatureIn = ({ featured_in }) => {
           <div className='mx-auto flex flex-col '>
             <h3 className='text-[20px] font-bold lg:text-[40px]'>
               {' '}
-              <span className='text-green-shad2   '>Feauture in </span>
+              <span className='text-green-shad2   '>Featured in </span>
             </h3>
           </div>
           <div className='hidden w-full flex-wrap items-center gap-x-8 gap-y-4 overflow-hidden py-8 lg:flex lg:justify-between lg:gap-x-0 '>
